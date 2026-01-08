@@ -101,3 +101,25 @@ except Exception as e:
 print("\n" + "=" * 70)
 print("TESTS TERMINES - Verifiez logs/experiment_data.json")
 print("=" * 70)
+
+
+from src.utils.logger import validate_log_entry, get_experiment_stats
+
+# Valid entry
+valid = {
+    "id": "123",
+    "timestamp": "2026-01-08",
+    "agent_name": "Test",
+    "model_used": "test",
+    "action": "ANALYSIS",
+    "details": {
+        "input_prompt": "test",
+        "output_response": "test"
+    },
+    "status": "SUCCESS"
+}
+assert validate_log_entry(valid) == True
+
+# Get stats
+stats = get_experiment_stats()
+print(f"✅ Stats: {stats}")

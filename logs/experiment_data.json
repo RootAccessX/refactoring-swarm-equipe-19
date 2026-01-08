@@ -60,6 +60,140 @@
         "output_response": "Reponse pour FIX"
       },
       "status": "SUCCESS"
+    },
+    {
+      "id": "433185cf-4042-4893-9645-9f5ecb91ef36",
+      "timestamp": "2026-01-08T17:56:46.817255",
+      "agent_name": "Test_Agent",
+      "model_used": "test-model",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Test prompt",
+        "output_response": "Test response"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "524c9711-aecc-450a-99f7-b134db949835",
+      "timestamp": "2026-01-08T17:57:19.820190",
+      "agent_name": "Auditor_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Analyse ce code Python",
+        "output_response": "J'ai trouve 3 problemes",
+        "file_analyzed": "example.py"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "e84bfac0-afe6-4d61-8bfe-d7db3c9be007",
+      "timestamp": "2026-01-08T17:57:19.820190",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Test de ANALYSIS",
+        "output_response": "Reponse pour ANALYSIS"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "7c145482-73e0-4daf-a2f9-bb31f8c7550b",
+      "timestamp": "2026-01-08T17:57:19.845681",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Test de GENERATION",
+        "output_response": "Reponse pour GENERATION"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "65157160-f13d-43bc-ab10-20197da3df36",
+      "timestamp": "2026-01-08T17:57:19.862218",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "Test de DEBUG",
+        "output_response": "Reponse pour DEBUG"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "abb776bc-d34f-4674-ab50-468bdd783560",
+      "timestamp": "2026-01-08T17:57:19.895928",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "FIX",
+      "details": {
+        "input_prompt": "Test de FIX",
+        "output_response": "Reponse pour FIX"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "a3701d08-d61c-4410-b565-bf476d680b09",
+      "timestamp": "2026-01-08T22:11:41.860584",
+      "agent_name": "Auditor_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Analyse ce code Python",
+        "output_response": "J'ai trouve 3 problemes",
+        "file_analyzed": "example.py"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "d2281697-30da-4338-92c8-e472e8d42696",
+      "timestamp": "2026-01-08T22:11:41.864168",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Test de ANALYSIS",
+        "output_response": "Reponse pour ANALYSIS"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "11537a82-4a20-47fc-8c5b-98eb0a7a5597",
+      "timestamp": "2026-01-08T22:11:41.875826",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Test de GENERATION",
+        "output_response": "Reponse pour GENERATION"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "33feb98f-9eac-475f-b1aa-6fe2a3816cdd",
+      "timestamp": "2026-01-08T22:11:41.890134",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "Test de DEBUG",
+        "output_response": "Reponse pour DEBUG"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "731bfaef-1779-4fff-a5b1-73d57406697b",
+      "timestamp": "2026-01-08T22:11:41.908863",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "FIX",
+      "details": {
+        "input_prompt": "Test de FIX",
+        "output_response": "Reponse pour FIX"
+      },
+      "status": "SUCCESS"
     }
   ]
 }

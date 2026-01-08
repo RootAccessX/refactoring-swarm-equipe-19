@@ -1,4 +1,17 @@
 # check_setup.py
+# -*- coding: utf-8 -*-
+import sys
+import os
+
+# Fix Windows console encoding for emojis
+if sys.platform == "win32":
+    import codecs
+    sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+
+# ... rest of the file
+
+
+
 import sys
 import os
 

@@ -193,6 +193,73 @@ def get_experiment_stats() -> dict:
     return stats
 
 
+def validate_log_entry(entry: dict) -> bool:
+    """
+    Validate that a log entry has all required fields.
+    
+    Args:
+        entry: Log entry dictionary
+    
+    Returns:
+        True if valid, False otherwise
+    """
+    required_fields = [
+        "id", "timestamp", "agent_name", 
+        "model_used", "action", "details", "status"
+    ]
+    
+    # Check top-level fields
+    for field in required_fields:
+        if field not in entry:
+            return False
+    
+    # Check details has required fields
+    if "input_prompt" not in entry["details"]:
+        return False
+    if "output_response" not in entry["details"]:
+        return False
+    
+    return True
+
+def get_experiment_stats() -> dict:
+    """
+    Get statistics about logged experiments.
+    
+    Returns:
+        Dictionary with stats (total_experiments, by_agent, by_action, etc.)
+    """
+    _ensure_log_file()
+    
+    with open(LOG_FILE, 'r') as f:
+        data = json.load(f)
+    
+    experiments = data.get("experiments", [])
+    
+    stats = {
+        "total_experiments": len(experiments),
+        "by_agent": {},
+        "by_action": {},
+        "by_status": {"SUCCESS": 0, "FAILURE": 0}
+    }
+    
+    for exp in experiments:
+        # Count by agent
+        agent = exp.get("agent_name", "unknown")
+        stats["by_agent"][agent] = stats["by_agent"].get(agent, 0) + 1
+        
+        # Count by action
+        action = exp.get("action", "unknown")
+        stats["by_action"][action] = stats["by_action"].get(action, 0) + 1
+        
+        # Count by status
+        status = exp.get("status", "FAILURE")
+        if status in stats["by_status"]:
+            stats["by_status"][status] += 1
+    
+    return stats
+
+
+
 if __name__ == "__main__":
     # Test rapide
     print("🧪 Test du logger...")
