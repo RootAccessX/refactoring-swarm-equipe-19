@@ -194,6 +194,18 @@
         "output_response": "Reponse pour FIX"
       },
       "status": "SUCCESS"
+    },
+    {
+      "id": "88e51e23-f139-483e-846b-9c8166e8113b",
+      "timestamp": "2026-01-09T19:37:30.862004",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting system on target directory ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
     }
   ]
 }
