@@ -33,6 +33,19 @@ def check_environment():
         os.makedirs("logs")
         print("✅ Dossier logs/ créé.")
 
+    # 4. Vérification Sandbox
+    if not os.path.exists("sandbox"):
+        os.makedirs("sandbox")
+        print("✅ Dossier sandbox/ créé.")
+    
+    if not os.path.exists("sandbox/dataset_inconnu"):
+        os.makedirs("sandbox/dataset_inconnu")
+        print("✅ Dossier sandbox/dataset_inconnu/ créé.")
+    
+    if not os.path.exists("sandbox/test_dataset"):
+        os.makedirs("sandbox/test_dataset")
+        print("✅ Dossier sandbox/test_dataset/ créé.")
+
     if all_good:
         print("\n🚀 TOUT EST PRÊT ! Vous pouvez commencer.")
     else:
