@@ -3,7 +3,7 @@
 ## Installation (3 steps)
 
 ### 1. Activate Virtual Environment
-```bash
+```bas
 venv\Scripts\activate
 ```
 
