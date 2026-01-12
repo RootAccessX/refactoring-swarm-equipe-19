@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Dict, List, Any, Optional
 from src.agent_registry import get_registry
 from src.utils.logger import log_experiment, ActionType
+from src.utils.quota_manager import get_quota_manager
 
 # Maximum iterations for self-healing loop
 MAX_ITERATIONS = 10
@@ -98,12 +99,19 @@ class RefactoringOrchestrator:
         # Generate summary
         summary = self._generate_summary()
         
+        # Get quota stats
+        quota_manager = get_quota_manager()
+        quota_stats = quota_manager.get_stats()
+        
         print(f"\n{'='*60}")
         print(f"✅ WORKFLOW COMPLETE")
         print(f"{'='*60}\n")
         print(f"Files processed: {summary['files_processed']}")
         print(f"Successful: {summary['successful']}")
         print(f"Failed: {summary['failed']}")
+        print(f"\n📊 API Usage:")
+        print(f"  Total API calls: {quota_stats['total_calls']}")
+        print(f"  Calls/minute: {quota_stats['calls_per_minute']:.1f}")
         
         return summary
     

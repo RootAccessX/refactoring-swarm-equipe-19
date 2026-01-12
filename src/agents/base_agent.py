@@ -2,6 +2,7 @@ import os
 from abc import ABC, abstractmethod
 from langchain_google_genai import ChatGoogleGenerativeAI
 from src.utils.logger import log_experiment, ActionType
+from src.utils.quota_manager import get_quota_manager
 
 class BaseAgent(ABC):
     """Abstract base class for all agents in the Refactoring Swarm."""
@@ -16,6 +17,7 @@ class BaseAgent(ABC):
         """
         self.agent_name = agent_name
         self.model_name = model_name
+        self.quota_manager = get_quota_manager()
         
         # Configure LangChain LLM
         api_key = os.getenv("GOOGLE_API_KEY")
@@ -42,6 +44,9 @@ class BaseAgent(ABC):
             LLM response text
         """
         try:
+            # Check quota before calling
+            self.quota_manager.check_and_record(self.agent_name)
+            
             # Call LLM through LangChain
             response = self.model.invoke(prompt)
             response_text = response.content
