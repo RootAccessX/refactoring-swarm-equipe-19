@@ -434,6 +434,114 @@
         "output_response": "Auditor → Fixer → Judge completed"
       },
       "status": "SUCCESS"
+    },
+    {
+      "id": "51ff0e16-8ebe-4c8e-b760-b3f0a5084692",
+      "timestamp": "2026-01-13T00:03:35.716053",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting system on target directory sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2be529e0-53ce-4ae8-afd4-7d12c7127fe9",
+      "timestamp": "2026-01-13T00:04:21.742529",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "f8f7bbb2-f08c-4775-b4e5-bb981abc0d6b",
+      "timestamp": "2026-01-13T00:04:21.745527",
+      "agent_name": "TestAgent",
+      "model_used": "test-model",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "Test prompt",
+        "output_response": "Test response"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "82746aad-db15-4a34-90f0-f4c9517d2260",
+      "timestamp": "2026-01-13T00:04:21.773524",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_code_1.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c3091972-0f79-4025-a8f4-61e77e7b3813",
+      "timestamp": "2026-01-13T00:04:21.778545",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_code_2.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "11929092-e044-40cd-be42-89d517efadf5",
+      "timestamp": "2026-01-13T00:04:21.794528",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_code_3.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "9b48f198-c04b-4fc3-b80f-cf86aafcff3d",
+      "timestamp": "2026-01-13T00:04:21.809526",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_code_4.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "9972f36a-033b-4488-8417-7e89761ff900",
+      "timestamp": "2026-01-13T00:05:29.788678",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "fad2aa5e-04d9-4b5f-974c-fc07ab1e61a1",
+      "timestamp": "2026-01-13T00:05:29.790609",
+      "agent_name": "TestAgent",
+      "model_used": "test-model",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "Test prompt",
+        "output_response": "Test response"
+      },
+      "status": "SUCCESS"
     }
   ]
 }
