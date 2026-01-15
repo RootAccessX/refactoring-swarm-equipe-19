@@ -247,6 +247,8 @@ class FixerAgent(BaseAgent):
                 action=ActionType.FIX,
                 details={
                     "file": file_path,
+                    "input_prompt": f"Applying fix to {file_path}",
+                    "output_response": f"Fix applied: {fix.get('explanation', '')}",
                     "explanation": fix.get("explanation", ""),
                     "confidence": fix.get("confidence", "unknown")
                 },
@@ -266,6 +268,8 @@ class FixerAgent(BaseAgent):
                 action=ActionType.FIX,
                 details={
                     "file": file_path,
+                    "input_prompt": f"Applying fix to {file_path}",
+                    "output_response": f"Failed to apply fix: {str(e)}",
                     "error": str(e),
                     "error_type": type(e).__name__
                 },
@@ -335,7 +339,8 @@ class FixerAgent(BaseAgent):
                 details={
                     "file": file_path,
                     "issue": issue.get("description", ""),
-                    "input_prompt": str(messages)
+                    "input_prompt": f"Generating fix for: {issue.get('description', '')}",
+                    "output_response": "Fix generation started"
                 },
                 status="STARTED"
             )
@@ -354,8 +359,9 @@ class FixerAgent(BaseAgent):
                     action=ActionType.FIX,
                     details={
                         "file": file_path,
-                        "error": "No fixes generated",
-                        "response": response_text[:500]
+                        "input_prompt": f"Generating fix for issue in {file_path}",
+                        "output_response": response_text[:500],
+                        "error": "No fixes generated"
                     },
                     status="FAILURE"
                 )
@@ -373,8 +379,9 @@ class FixerAgent(BaseAgent):
                 action=ActionType.FIX,
                 details={
                     "file": file_path,
-                    "fixes_generated": len(fix_result["fixes"]),
-                    "output_response": response_text
+                    "input_prompt": f"Generating fix for issue in {file_path}",
+                    "output_response": response_text,
+                    "fixes_generated": len(fix_result["fixes"])
                 },
                 status="SUCCESS"
             )
@@ -392,6 +399,8 @@ class FixerAgent(BaseAgent):
                 action=ActionType.FIX,
                 details={
                     "file": file_path,
+                    "input_prompt": f"Generating fix for issue in {file_path}",
+                    "output_response": f"Fix generation failed: {str(e)}",
                     "error": str(e),
                     "error_type": type(e).__name__
                 },

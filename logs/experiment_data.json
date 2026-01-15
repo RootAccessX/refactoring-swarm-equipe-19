@@ -2979,6 +2979,413 @@
         "output_response": "Initialization completed"
       },
       "status": "SUCCESS"
+    },
+    {
+      "id": "3b972b5a-4a05-414a-ba9d-aa5b01dfeb1f",
+      "timestamp": "2026-01-15T23:24:03.574301",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting system on target directory ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c0699ea1-adf2-4259-9ad6-1dedb966f1ce",
+      "timestamp": "2026-01-15T23:24:36.094127",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c6fc8031-b4f0-4de6-9686-6b5e53760268",
+      "timestamp": "2026-01-15T23:24:36.109459",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_code_quality.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "d59945c9-587c-45bf-ad4c-c8ff989bc892",
+      "timestamp": "2026-01-15T23:24:36.128373",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_logic_errors.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "bd65ab4f-9510-4e41-b4b8-d5244cfc5b37",
+      "timestamp": "2026-01-15T23:24:36.150373",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_mixed_errors.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "50347984-cc17-44d4-98be-25f2a8a17f4d",
+      "timestamp": "2026-01-15T23:24:36.170372",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_runtime_errors.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "709bc546-6c82-4d89-9621-6aa297bc5f53",
+      "timestamp": "2026-01-15T23:24:36.186836",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_syntax_errors.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "f45b8b42-a304-4f9b-82df-bb6550513fdb",
+      "timestamp": "2026-01-15T23:28:04.847459",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "ca034860-01a7-43c9-adef-e60d12baa8e9",
+      "timestamp": "2026-01-15T23:28:04.857460",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "cc62d2ed-e150-452c-9552-ec9a0eb1b0f0",
+      "timestamp": "2026-01-15T23:28:35.519759",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "76660b32-62ba-4f4d-8b1b-1ba3ac552101",
+      "timestamp": "2026-01-15T23:28:35.532755",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "aacfb338-bf6d-4fdd-b2c1-c756ee45240a",
+      "timestamp": "2026-01-15T23:29:41.678910",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "cb423f78-f6d7-4c77-82ca-980279c89fdb",
+      "timestamp": "2026-01-15T23:29:41.691885",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "9db7f18e-a48b-4d9f-a415-8fbc5092accd",
+      "timestamp": "2026-01-15T23:36:31.850858",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "792e6529-ed6d-45aa-823f-44a8a0e27a9d",
+      "timestamp": "2026-01-15T23:36:31.858861",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "2e6ef0ea-ef00-4aa9-b0de-c5000019c4a9",
+      "timestamp": "2026-01-15T23:37:32.142112",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "75803b43-7fed-4313-8c6c-c7e40997b2a3",
+      "timestamp": "2026-01-15T23:37:32.156697",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "5b362ef7-b466-4635-a769-3fe433d2c23f",
+      "timestamp": "2026-01-15T23:39:24.311873",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "```json\n{\n    \"issues\": [\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 9,\n            \"line_end\": 11,\n            \"severity\": \"high\",\n            \"category\": \"architecture\",\n            \"description\": \"Use of global mutable variables ('users', 'admin_password', 'DEBUG') leads to tightly coupled code, makes testing difficult, and can introduce unexpected side effects. 'admin_password' is hardcoded, which is a severe security vulnerability.\",\n            \"recommendation\": \"Encapsulate 'users' within a class (e.g., UserManager). Move 'admin_password' to environment variables or a secure configuration management system. Replace 'DEBUG' flag with a proper logging framework.\",\n            \"impact\": \"Improved security, maintainability, testability, and reduced risk of unintended state changes.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 14,\n            \"line_end\": 16,\n            \"severity\": \"low\",\n            \"category\": \"code_smell\",\n            \"description\": \"Unused imports ('sys', 'json') and variables ('unused_var') clutter the codebase and can lead to confusion.\",\n            \"recommendation\": \"Remove 'import sys', 'import json', and 'unused_var'.\",\n            \"impact\": \"Cleaner code, reduced cognitive load, and slightly faster module loading.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 18,\n            \"line_end\": 26,\n            \"severity\": \"medium\",\n            \"category\": \"code_smell\",\n            \"description\": \"The 'add_user' function exhibits several code quality issues: missing docstring, lack of type hints, PEP 8 violations (missing spaces after commas, bad dictionary formatting), direct modification of global state, and a debug print statement left in production code.\",\n            \"recommendation\": \"Add a docstring and type hints. Apply PEP 8 formatting. Refactor to use an instance of a UserManager class to manage users instead of global state. Replace 'print(\\\"User added\\\")' with a proper logging call or remove it.\",\n            \"impact\": \"Improved readability, maintainability, robustness, and adherence to Python best practices.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 28,\n            \"line_end\": 39,\n            \"severity\": \"medium\",\n            \"category\": \"code_smell\",\n            \"description\": \"The 'delete_user' function uses an overly complex and verbose loop to find and delete a user by index. The condition 'found == True' is redundant.\",\n            \"recommendation\": \"Simplify the deletion logic. If deleting by index, use `del users[user_id]` directly after validating the index. Consider refactoring to delete by a unique identifier (e.g., user ID) rather than list index, which can be fragile.\",\n            \"impact\": \"Improved readability, conciseness, and potentially better performance for large lists.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 41,\n            \"line_end\": 59,\n            \"severity\": \"high\",\n            \"category\": \"architecture\",\n            \"description\": \"The 'UserManager' class is poorly designed: it lacks a docstring, its methods are defined without 'self' but are not declared as static, and they directly access global state ('users'). 'validate_email' is overly simplistic, 'validate_password' uses a magic number, and 'get_user_info' lacks error handling.\",\n            \"recommendation\": \"Add a docstring. Declare methods like 'validate_email' and 'validate_password' as `@staticmethod` if they don't need instance state, or refactor them to be instance methods if they should operate on a 'UserManager' instance. Encapsulate the 'users' list within the 'UserManager' instance. Replace the magic number '8' with a named constant. Add error handling (e.g., `try-except IndexError`) to 'get_user_info'.\",\n            \"impact\": \"Improved encapsulation, modularity, robustness, and adherence to object-oriented principles.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 62,\n            \"line_end\": 68,\n            \"severity\": \"medium\",\n            \"category\": \"code_smell\",\n            \"description\": \"The 'calculate_age_in_months', 'calculate_age_in_days', and 'calculate_age_in_hours' functions contain duplicated logic, violating the DRY principle. The calculation for days ignores leap years.\",\n            \"recommendation\": \"Consolidate these into a single function that takes 'years' and a 'unit' (e.g., 'months', 'days', 'hours') or a conversion factor. Address the leap year inaccuracy if precision is required.\",\n            \"impact\": \"Reduced code duplication, easier maintenance, and improved consistency.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 71,\n            \"line_end\": 72,\n            \"severity\": \"low\",\n            \"category\": \"code_smell\",\n            \"description\": \"The 'old_function_not_used' function is dead code, meaning it is defined but never called.\",\n            \"recommendation\": \"Remove the 'old_function_not_used' function.\",\n            \"impact\": \"Cleaner codebase and reduced maintenance burden.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 75,\n            \"line_end\": 77,\n            \"severity\": \"medium\",\n            \"category\": \"code_smell\",\n            \"description\": \"The 'check_user_permissions' function (as indicated by the comment) likely has too many nested conditional statements, leading to high cyclomatic complexity and reduced readability.\",\n            \"recommendation\": \"Refactor using guard clauses to reduce nesting, extract complex conditions into helper functions, or consider a more declarative permission system.\",\n            \"impact\": \"Improved readability, maintainability, and testability.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 7,\n            \"line_end\": 9,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'calculate_discount' function incorrectly adds the discount to the price instead of subtracting it.\",\n            \"recommendation\": \"Change the `+` operator to `-` in the calculation: `price - (price * discount_percent / 100)`.\",\n            \"impact\": \"Correct calculation of discounted prices.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 14,\n            \"line_end\": 20,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'find_maximum' function incorrectly compares numbers using `<` instead of `>` to find the maximum. Also, the loop checks the first element against itself.\",\n            \"recommendation\": \"Change `if num < max_num:` to `if num > max_num:`. For efficiency, the loop can start from the second element: `for num in numbers[1:]:`.\",\n            \"impact\": \"Correct identification of the maximum number in a list.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 23,\n            \"line_end\": 25,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'is_even' function incorrectly checks for odd numbers (`== 1`) instead of even numbers (`== 0`).\",\n            \"recommendation\": \"Change `return number % 2 == 1` to `return number % 2 == 0`.\",\n            \"impact\": \"Correct determination of whether a number is even.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 28,\n            \"line_end\": 34,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'calculate_factorial' function has an off-by-one error in its loop, causing it to not include the number 'n' in the multiplication.\",\n            \"recommendation\": \"Change `for i in range(1, n):` to `for i in range(1, n + 1):`.\",\n            \"impact\": \"Correct calculation of factorials.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 37,\n            \"line_end\": 41,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'reverse_string' function incorrectly appends characters in forward order, effectively returning the original string.\",\n            \"recommendation\": \"Change `reversed_text += text[i]` to `reversed_text += text[len(text) - 1 - i]` or use Python's slicing `return text[::-1]` for a more idiomatic solution.\",\n            \"impact\": \"Correct reversal of strings.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 49,\n            \"line_end\": 51,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'deposit' method in 'BankAccount' incorrectly subtracts the deposit amount from the balance.\",\n            \"recommendation\": \"Change `self.balance -= amount` to `self.balance += amount`.\",\n            \"impact\": \"Correct handling of deposits in bank accounts.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 54,\n            \"line_end\": 57,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'withdraw' method in 'BankAccount' incorrectly adds the withdrawal amount to the balance.\",\n            \"recommendation\": \"Change `self.balance += amount` to `self.balance -= amount`.\",\n            \"impact\": \"Correct handling of withdrawals from bank accounts.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 60,\n            \"line_end\": 62,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'count_vowels' function (as indicated by the comment) likely has a logic error, possibly related to case sensitivity or incorrect iteration.\",\n            \"recommendation\": \"Ensure the text is converted to a consistent case (e.g., lowercase) before checking for vowels, and iterate through the text correctly.\",\n            \"impact\": \"Accurate counting of vowels in text.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 6,\n            \"line_end\": 6,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing colon after class definition 'ShoppingCart'.\",\n            \"recommendation\": \"Add a colon: `class ShoppingCart:`.\",\n            \"impact\": \"Allows the program to parse and execute the class definition.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 14,\n            \"line_end\": 17,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'add_item' method incorrectly calculates and stores the item's price as `price * quantity` and always sets `quantity` to 1. This means the actual quantity is lost and the price is pre-multiplied.\",\n            \"recommendation\": \"Store `price` and `quantity` as separate attributes in the item dictionary: `{'name': name, 'price': price, 'quantity': quantity}`.\",\n            \"impact\": \"Correct representation of items in the shopping cart, allowing for accurate calculations later.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 19,\n            \"line_end\": 24,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'remove_item' method is missing the 'self' parameter, which will cause a `NameError` when trying to access `self.items`.\",\n            \"recommendation\": \"Add 'self' as the first parameter to the method definition: `def remove_item(self, item_name):`.\",\n            \"impact\": \"Allows the method to correctly access the instance's attributes and prevents a runtime crash.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 27,\n            \"line_end\": 31,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'calculate_subtotal' method incorrectly sums `item['price']` without considering the actual `quantity` of each item (which is also flawed from `add_item`).\",\n            \"recommendation\": \"Modify the calculation to `subtotal += item['price'] * item['quantity']`, assuming `add_item` is fixed to store quantity correctly.\",\n            \"impact\": \"Accurate calculation of the subtotal based on item prices and quantities.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 34,\n            \"line_end\": 36,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'apply_discount' method incorrectly adds the discount percentage to an existing `discount_rate`, rather than setting or applying it as a reduction.\",\n            \"recommendation\": \"Clarify the intended behavior. If `percent` is the new discount rate, set `self.discount_rate = percent`. If it's an additional discount, the logic needs to be more complex, likely involving a list of discounts or a single effective rate.\",\n            \"impact\": \"Correct application of discounts to the shopping cart.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 38,\n            \"line_end\": 47,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"The 'calculate_total' method has a missing colon in its definition. It also contains a logic error in calculating `discount_amount` and uses a magic number for tax.\",\n            \"recommendation\": \"Add a colon: `def calculate_total(self):`. Correct the discount calculation to `discount_amount = subtotal * self.discount_rate`. Replace the magic number `0.10` with `self.tax_rate`.\",\n            \"impact\": \"Allows the method to execute, and ensures correct calculation of the total price, improving maintainability.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 49,\n            \"line_end\": 51,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"The 'get_item_count' method (as indicated by the comment) incorrectly returns the number of unique items instead of the total quantity of all items.\",\n            \"recommendation\": \"Iterate through `self.items` and sum the `quantity` attribute of each item to get the total count.\",\n            \"impact\": \"Accurate reporting of the total number of items in the cart.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 6,\n            \"line_end\": 8,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'divide_numbers' function does not handle division by zero, which will cause a `ZeroDivisionError`.\",\n            \"recommendation\": \"Add a check for `b == 0` and handle it gracefully (e.g., return `None`, raise a `ValueError`, or return a default value).\",\n            \"impact\": \"Prevents program crashes due to division by zero, making the function more robust.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 11,\n            \"line_end\": 13,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'get_user_name' function directly accesses `user_dict['name']` without checking if the 'name' key exists, which will cause a `KeyError` if it's missing.\",\n            \"recommendation\": \"Use `user_dict.get('name')` with an optional default value, or wrap the access in a `try-except KeyError` block.\",\n            \"impact\": \"Prevents program crashes when the 'name' key is absent, improving robustness.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 16,\n            \"line_end\": 20,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'process_list' function accesses `items[0]` and `items[-1]` without checking if the list is empty, which will cause an `IndexError`.\",\n            \"recommendation\": \"Add a check `if not items:` at the beginning and handle the empty list case (e.g., return `None, None` or raise a `ValueError`).\",\n            \"impact\": \"Prevents program crashes when processing empty lists, making the function more robust.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 23,\n            \"line_end\": 27,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'read_file_content' function does not include exception handling for `FileNotFoundError` or other potential I/O errors.\",\n            \"recommendation\": \"Wrap the file operations in a `try-except FileNotFoundError` block (and potentially other `IOError` types) to gracefully handle missing files.\",\n            \"impact\": \"Prevents program crashes when the specified file does not exist or cannot be accessed, improving robustness.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 30,\n            \"line_end\": 34,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'calculate_average' function does not check for an empty list before performing division by `len(numbers)`, which will cause a `ZeroDivisionError`.\",\n            \"recommendation\": \"Add a check `if not numbers:` at the beginning and handle the empty list case (e.g., return `0` or raise a `ValueError`).\",\n            \"impact\": \"Prevents program crashes due to division by zero, making the function more robust.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 41,\n            \"line_end\": 43,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'get_item' method in 'DataProcessor' does not perform bounds checking before accessing `self.data[index]`, which can lead to an `IndexError`.\",\n            \"recommendation\": \"Add a check `if 0 <= index < len(self.data):` or wrap the access in a `try-except IndexError` block.\",\n            \"impact\": \"Prevents program crashes due to invalid index access, improving robustness.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 46,\n            \"line_end\": 48,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'convert_to_number' method directly calls `int(value)` without handling potential `ValueError` for non-numeric inputs.\",\n            \"recommendation\": \"Wrap the conversion in a `try-except ValueError` block to gracefully handle invalid input (e.g., return `None` or raise a custom error).\",\n            \"impact\": \"Prevents program crashes when attempting to convert non-numeric values, improving robustness.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 51,\n            \"line_end\": 53,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'access_nested_data' method directly accesses nested dictionary keys without validation, which will cause `KeyError` if the expected structure is not present.\",\n            \"recommendation\": \"Use `.get()` with default values for each level of nesting, or wrap the access in a `try-except KeyError` block.\",\n            \"impact\": \"Prevents program crashes due to missing keys in nested data structures, improving robustness.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 56,\n            \"line_end\": 62,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'infinite_loop_risk' function has a potential infinite loop if 'n' is 0 or negative, as 'i' starts at 0 and increments, but `i < n` will never be true for `n <= 0`.\",\n            \"recommendation\": \"Add a guard clause at the beginning: `if n <= 0: return 0` to handle non-positive 'n' values before the loop.\",\n            \"impact\": \"Prevents the program from freezing or consuming excessive CPU resources due to an infinite loop.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 65,\n            \"line_end\": 66,\n            \"severity\": \"medium\",\n            \"category\": \"performance\",\n            \"description\": \"The 'memory_leak_risk' function (as indicated by the comment) creates a large data structure without explicit cleanup, which could lead to excessive memory consumption if not properly managed or if references persist.\",\n            \"recommendation\": \"Ensure large data structures are properly scoped so they can be garbage collected, or explicitly delete/clear them if they are long-lived and no longer needed. Consider using generators or streaming for very large datasets.\",\n            \"impact\": \"Improved memory efficiency and prevention of potential out-of-memory errors.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 6,\n            \"line_end\": 8,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing colon at the end of the function definition for 'add_numbers'.\",\n            \"recommendation\": \"Add a colon: `def add_numbers(a, b):`.\",\n            \"impact\": \"Allows the program to parse and execute the function definition.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 11,\n            \"line_end\": 13,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing closing parenthesis in the `print` statement within the 'multiply' function.\",\n            \"recommendation\": \"Add a closing parenthesis: `print(f\\\"Result is {result}\\\")`.\",\n            \"impact\": \"Allows the program to parse and execute the print statement.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 15,\n            \"line_end\": 15,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing colon after the class name 'Calculator'.\",\n            \"recommendation\": \"Add a colon: `class Calculator:`.\",\n            \"impact\": \"Allows the program to parse and execute the class definition.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 23,\n            \"line_end\": 26,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"The 'calculate_average' method is missing the 'self' parameter, which is required for instance methods. Calling it as an instance method will result in a `TypeError`.\",\n            \"recommendation\": \"Add 'self' as the first parameter: `def calculate_average(self, numbers):` or declare it as a `@staticmethod` if it doesn't need instance state.\",\n            \"impact\": \"Allows the method to be called correctly without a runtime error.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 29,\n            \"line_end\": 31,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Indentation error in the 'subtract' function. The body of the function is not indented.\",\n            \"recommendation\": \"Correct the indentation for `result = a - b` and `return result` to be four spaces (or one tab) relative to the `def` statement.\",\n            \"impact\": \"Allows the program to parse and execute the function definition.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 34,\n            \"line_end\": 36,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing comma between parameters 'base' and 'exponent' in the 'power' function definition.\",\n            \"recommendation\": \"Add a comma: `def power(base, exponent):`.\",\n            \"impact\": \"Allows the program to parse and execute the function definition.\"\n        }\n    ],\n    \"summary\": {\n        \"total_issues\": 39,\n        \"high_severity\": 31,\n        \"medium_severity\": 6,\n        \"low_severity\": 2\n    }\n}\n```",
+        "issues_found": 39
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "892005b1-7639-4e4a-9557-b05784add732",
+      "timestamp": "2026-01-15T23:39:24.320914",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "FIX",
+      "details": {
+        "file": "sandbox\\test_cases\\buggy_code_quality.py",
+        "issue": "Use of global mutable variables ('users', 'admin_password', 'DEBUG') leads to tightly coupled code, makes testing difficult, and can introduce unexpected side effects. 'admin_password' is hardcoded, which is a severe security vulnerability.",
+        "input_prompt": "Generating fix for: Use of global mutable variables ('users', 'admin_password', 'DEBUG') leads to tightly coupled code, makes testing difficult, and can introduce unexpected side effects. 'admin_password' is hardcoded, which is a severe security vulnerability.",
+        "output_response": "Fix generation started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "fd9eebb8-a6b4-4fae-8cac-00efed5fd82f",
+      "timestamp": "2026-01-15T23:50:46.335555",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting system on target directory ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c37e3c2b-242e-4dfe-9f22-889e59505d32",
+      "timestamp": "2026-01-15T23:51:42.625811",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "72792924-4263-466e-a38e-64864b3fe063",
+      "timestamp": "2026-01-15T23:51:42.640178",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "29e23093-7069-49fe-aeef-807801a2f391",
+      "timestamp": "2026-01-15T23:52:34.368959",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting refactoring workflow on ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "49bf2098-a384-43a8-8f2b-19bb03d9bd3b",
+      "timestamp": "2026-01-15T23:52:34.394955",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "9b72c62b-bd6e-4d75-9fed-214863dc2cf4",
+      "timestamp": "2026-01-15T23:52:34.462506",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "9a5ecc40-6267-42ef-9813-fa14f752a42a",
+      "timestamp": "2026-01-16T00:05:07.712803",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting system on target directory ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "f9f03ae0-02df-4e7a-8c7f-7f037205fc3c",
+      "timestamp": "2026-01-16T00:06:41.251152",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting refactoring workflow on ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "7de16a08-ab15-4b8b-8c41-3e161e832121",
+      "timestamp": "2026-01-16T00:06:41.345157",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "fea18405-ae3a-4e39-ab7d-a78458a832c1",
+      "timestamp": "2026-01-16T00:06:41.593284",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "729d1a03-ac3b-4d5a-8c89-f05aaa204e11",
+      "timestamp": "2026-01-16T00:07:39.742093",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting refactoring workflow on ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "a0b7fbb2-b541-40fc-9196-e9b2d32d1b46",
+      "timestamp": "2026-01-16T00:07:39.785784",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "63cf45ee-cefa-4a17-8d2d-334f4eed8e91",
+      "timestamp": "2026-01-16T00:07:39.877123",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
     }
   ]
 }

@@ -208,7 +208,8 @@ class AuditorAgent(BaseAgent):
                 details={
                     "target_dir": target_dir,
                     "files_analyzed": len(code_files),
-                    "input_prompt": str(messages)
+                    "input_prompt": f"Analyzing {len(code_files)} Python files in {target_dir}",
+                    "output_response": "Analysis started"
                 },
                 status="STARTED"
             )
@@ -228,6 +229,7 @@ class AuditorAgent(BaseAgent):
                 details={
                     "target_dir": target_dir,
                     "files_analyzed": len(code_files),
+                    "input_prompt": f"Analyzing {len(code_files)} Python files in {target_dir}",
                     "output_response": response_text,
                     "issues_found": len(analysis_result.get("issues", []))
                 },
@@ -250,6 +252,8 @@ class AuditorAgent(BaseAgent):
                 details={
                     "target_dir": target_dir,
                     "files_analyzed": len(code_files),
+                    "input_prompt": f"Analyzing {len(code_files)} Python files in {target_dir}",
+                    "output_response": f"Analysis failed: {str(e)}",
                     "error": str(e),
                     "error_type": type(e).__name__
                 },

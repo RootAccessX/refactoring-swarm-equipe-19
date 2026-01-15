@@ -306,7 +306,7 @@ class JudgeAgent(BaseAgent):
                     "overall_score": judgment["overall_score"],
                     "issues_found": len(judgment.get("issues_found", [])),
                     "blocking_issues": len(judgment.get("blocking_issues", [])),
-                    "input_prompt": str(messages),
+                    "input_prompt": f"Evaluating code quality for {file_path}",
                     "output_response": response_text
                 },
                 status="SUCCESS"
@@ -339,6 +339,8 @@ class JudgeAgent(BaseAgent):
                 action=ActionType.JUDGE,
                 details={
                     "file": file_path,
+                    "input_prompt": f"Evaluating code quality for {file_path}",
+                    "output_response": f"Judgment failed: {str(e)}",
                     "error": str(e),
                     "error_type": type(e).__name__
                 },
