@@ -554,6 +554,2431 @@
         "output_response": "Initialization completed"
       },
       "status": "SUCCESS"
+    },
+    {
+      "id": "10e9d22a-cf79-4b6b-ad19-b00b3010825b",
+      "timestamp": "2026-01-15T22:33:00.212363",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting system on target directory ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "4313571b-1512-4eaf-8fa1-7f5608ce7fae",
+      "timestamp": "2026-01-15T22:35:00.215089",
+      "agent_name": "Auditor_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Analyse ce code Python",
+        "output_response": "J'ai trouve 3 problemes",
+        "file_analyzed": "example.py"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c1f0a70c-7e53-4469-b954-1d6be8735cd1",
+      "timestamp": "2026-01-15T22:35:00.216087",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Test de ANALYSIS",
+        "output_response": "Reponse pour ANALYSIS"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "28757a9d-e9a4-44c8-ba12-8fd8d32c12b0",
+      "timestamp": "2026-01-15T22:35:00.231089",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Test de GENERATION",
+        "output_response": "Reponse pour GENERATION"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "cfe1d616-3eca-4042-b130-cf66e1dddf39",
+      "timestamp": "2026-01-15T22:35:00.244090",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "Test de DEBUG",
+        "output_response": "Reponse pour DEBUG"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "55428152-6d48-4258-b7c3-01af784c2820",
+      "timestamp": "2026-01-15T22:35:00.257091",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "FIX",
+      "details": {
+        "input_prompt": "Test de FIX",
+        "output_response": "Reponse pour FIX"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "0b7ae8c7-8933-47db-97d6-0a6e955c5230",
+      "timestamp": "2026-01-15T22:35:47.149922",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Analyze Python file for code quality",
+        "output_response": "Found 5 issues: duplicate code, unused variables, missing docstrings",
+        "file_path": "sample.py",
+        "issues_count": 5
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "44cf5247-82e0-4db8-9423-3944dfd0db4c",
+      "timestamp": "2026-01-15T22:35:47.151804",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Generate refactored code",
+        "output_response": "Refactored code with all issues addressed",
+        "file_path": "sample.py",
+        "fixes_applied": 5
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "670a5f5b-de29-494a-8933-119e1a32d322",
+      "timestamp": "2026-01-15T22:36:44.641967",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Analyze Python file for code quality",
+        "output_response": "Found 5 issues: duplicate code, unused variables, missing docstrings",
+        "file_path": "sample.py",
+        "issues_count": 5
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "0205aac1-a041-4a3e-b78e-222d83639fc9",
+      "timestamp": "2026-01-15T22:36:44.644944",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Generate refactored code",
+        "output_response": "Refactored code with all issues addressed",
+        "file_path": "sample.py",
+        "fixes_applied": 5
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c2652f75-4422-42cc-9f82-9e03045dea9b",
+      "timestamp": "2026-01-15T22:36:44.658305",
+      "agent_name": "JudgeAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Validate refactored code",
+        "output_response": "All validation checks passed",
+        "file_path": "sample.py",
+        "tests_passed": true,
+        "code_quality_score": 0.95
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "f52f7b06-dbaf-4782-a9cf-49b8c4840bca",
+      "timestamp": "2026-01-15T22:36:44.678840",
+      "agent_name": "RefinementAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Refine code - iteration 1",
+        "output_response": "Refinement complete - quality improved by 10%",
+        "iteration": 1,
+        "quality_improvement": 10
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "0b0837f1-2ffe-4d26-a05b-4785dfee716a",
+      "timestamp": "2026-01-15T22:36:44.681823",
+      "agent_name": "RefinementAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Refine code - iteration 2",
+        "output_response": "Refinement complete - quality improved by 20%",
+        "iteration": 2,
+        "quality_improvement": 20
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "aa2a85c3-c080-4d08-b997-d98417fce1e9",
+      "timestamp": "2026-01-15T22:36:44.692824",
+      "agent_name": "RefinementAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Refine code - iteration 3",
+        "output_response": "Refinement complete - quality improved by 30%",
+        "iteration": 3,
+        "quality_improvement": 30
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "24195e33-4aae-4088-bb43-1dc4437428a5",
+      "timestamp": "2026-01-15T22:36:44.712117",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "Analyze test failures",
+        "output_response": "Found 3 bugs: null pointer exception, off-by-one error, logic error",
+        "bug_count": 3
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "b9f40d48-01a1-46c0-9c0c-0d5697c6912b",
+      "timestamp": "2026-01-15T22:36:44.715118",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "FIX",
+      "details": {
+        "input_prompt": "Fix bug 1",
+        "output_response": "Bug 1 fixed and tested successfully",
+        "bug_number": 1
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "5f895104-2ae1-4835-95b0-1c9bf85db980",
+      "timestamp": "2026-01-15T22:36:44.725706",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "FIX",
+      "details": {
+        "input_prompt": "Fix bug 2",
+        "output_response": "Bug 2 fixed and tested successfully",
+        "bug_number": 2
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2fe1bd1b-dc46-4a9c-b475-a86869d35284",
+      "timestamp": "2026-01-15T22:36:44.738706",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "FIX",
+      "details": {
+        "input_prompt": "Fix bug 3",
+        "output_response": "Bug 3 fixed and tested successfully",
+        "bug_number": 3
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "64540bb7-8d1e-4844-aece-be13681f3f89",
+      "timestamp": "2026-01-15T22:36:44.758826",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Analyze code for issues",
+        "output_response": "Completed by AuditorAgent",
+        "agent_role": "AuditorAgent"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "a5fac78d-ef9c-4aee-adce-b664c8008bb7",
+      "timestamp": "2026-01-15T22:36:44.760825",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Generate fixes",
+        "output_response": "Completed by FixerAgent",
+        "agent_role": "FixerAgent"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "b7d2359d-2284-4461-b844-ceac587ba610",
+      "timestamp": "2026-01-15T22:36:44.771826",
+      "agent_name": "JudgeAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Judge and validate solutions",
+        "output_response": "Completed by JudgeAgent",
+        "agent_role": "JudgeAgent"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "34957adb-6312-44dc-9b1b-f841237b643d",
+      "timestamp": "2026-01-15T22:36:57.764993",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting system on target directory ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "906f261b-865c-4c2a-ae9e-7bd36e6dce65",
+      "timestamp": "2026-01-15T22:45:41.578293",
+      "agent_name": "Auditor_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Analyse ce code Python",
+        "output_response": "J'ai trouve 3 problemes",
+        "file_analyzed": "example.py"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c195c531-de37-4e2d-9455-876e1a19193b",
+      "timestamp": "2026-01-15T22:45:41.581360",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Test de ANALYSIS",
+        "output_response": "Reponse pour ANALYSIS"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "b4a20006-d229-4acc-80bd-968e4d4cf143",
+      "timestamp": "2026-01-15T22:45:41.593492",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Test de GENERATION",
+        "output_response": "Reponse pour GENERATION"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "77087223-fa74-4d3b-895e-7bfaca9b3de1",
+      "timestamp": "2026-01-15T22:45:41.603583",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "Test de DEBUG",
+        "output_response": "Reponse pour DEBUG"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "18a6fc16-e0ab-4113-89c2-37cb3e9c41c7",
+      "timestamp": "2026-01-15T22:45:41.615982",
+      "agent_name": "Test_Agent",
+      "model_used": "gemini-2.0-flash",
+      "action": "FIX",
+      "details": {
+        "input_prompt": "Test de FIX",
+        "output_response": "Reponse pour FIX"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "a6140165-8596-48d2-9731-34b7283b6818",
+      "timestamp": "2026-01-15T22:45:41.736980",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Analyze Python file for code quality",
+        "output_response": "Found 5 issues: duplicate code, unused variables, missing docstrings",
+        "file_path": "sample.py",
+        "issues_count": 5
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c546e56a-2c9a-459d-83f8-fe1eea8a607b",
+      "timestamp": "2026-01-15T22:45:41.740071",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Generate refactored code",
+        "output_response": "Refactored code with all issues addressed",
+        "file_path": "sample.py",
+        "fixes_applied": 5
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "d91ce792-565d-4e52-b5b1-4ae9ec29cbc4",
+      "timestamp": "2026-01-15T22:45:41.752063",
+      "agent_name": "JudgeAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Validate refactored code",
+        "output_response": "All validation checks passed",
+        "file_path": "sample.py",
+        "tests_passed": true,
+        "code_quality_score": 0.95
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "8a5ebbe6-e263-4327-93bb-4307f27fda8a",
+      "timestamp": "2026-01-15T22:45:41.777976",
+      "agent_name": "RefinementAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Refine code - iteration 1",
+        "output_response": "Refinement complete - quality improved by 10%",
+        "iteration": 1,
+        "quality_improvement": 10
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "315f2e50-0608-42ab-87fe-f206c555b864",
+      "timestamp": "2026-01-15T22:45:41.782001",
+      "agent_name": "RefinementAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Refine code - iteration 2",
+        "output_response": "Refinement complete - quality improved by 20%",
+        "iteration": 2,
+        "quality_improvement": 20
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "7b4482dc-8fef-4bb5-a159-5d2d53292821",
+      "timestamp": "2026-01-15T22:45:41.800097",
+      "agent_name": "RefinementAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Refine code - iteration 3",
+        "output_response": "Refinement complete - quality improved by 30%",
+        "iteration": 3,
+        "quality_improvement": 30
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "870048aa-e3ab-49b1-aca4-8be9171cf5f4",
+      "timestamp": "2026-01-15T22:45:41.829980",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "Analyze test failures",
+        "output_response": "Found 3 bugs: null pointer exception, off-by-one error, logic error",
+        "bug_count": 3
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "442aeb79-cac1-4443-b7e8-cf8b62ec9a8b",
+      "timestamp": "2026-01-15T22:45:41.831981",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "FIX",
+      "details": {
+        "input_prompt": "Fix bug 1",
+        "output_response": "Bug 1 fixed and tested successfully",
+        "bug_number": 1
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "cb7ceb94-e8b7-4e3a-b947-d363b37bb2a0",
+      "timestamp": "2026-01-15T22:45:41.845978",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "FIX",
+      "details": {
+        "input_prompt": "Fix bug 2",
+        "output_response": "Bug 2 fixed and tested successfully",
+        "bug_number": 2
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "8f8631d8-8d86-4bbc-a388-5cabd3d05829",
+      "timestamp": "2026-01-15T22:45:41.858976",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "FIX",
+      "details": {
+        "input_prompt": "Fix bug 3",
+        "output_response": "Bug 3 fixed and tested successfully",
+        "bug_number": 3
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "5fdf1953-69b0-46ea-8156-d9ff62ccf1f5",
+      "timestamp": "2026-01-15T22:45:41.885034",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Analyze code for issues",
+        "output_response": "Completed by AuditorAgent",
+        "agent_role": "AuditorAgent"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "a8475fb4-8e7f-4688-b3b9-f68dfe9ee2e8",
+      "timestamp": "2026-01-15T22:45:41.888103",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "Generate fixes",
+        "output_response": "Completed by FixerAgent",
+        "agent_role": "FixerAgent"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "09efd32a-8625-4659-b097-8e792a0baa1d",
+      "timestamp": "2026-01-15T22:45:41.906980",
+      "agent_name": "JudgeAgent",
+      "model_used": "gemini-2.0-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Judge and validate solutions",
+        "output_response": "Completed by JudgeAgent",
+        "agent_role": "JudgeAgent"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "1f27d933-7ee4-4c7d-9f2c-40e74312ce35",
+      "timestamp": "2026-01-15T22:45:42.092975",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting system on target directory ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "78f81dae-cdf0-49be-94a9-bc1da9014db3",
+      "timestamp": "2026-01-15T22:51:17.484159",
+      "agent_name": "UnitTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "142dff84-669a-4e3a-8094-8af567b614f6",
+      "timestamp": "2026-01-15T22:51:17.488130",
+      "agent_name": "UUIDTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "8ce964fb-fd2f-442d-b5de-a4b306682a67",
+      "timestamp": "2026-01-15T22:51:17.513141",
+      "agent_name": "UniqueTest1",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test1",
+        "output_response": "result1"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "0c1b6a56-c9d6-46a7-8995-9f08869e5216",
+      "timestamp": "2026-01-15T22:51:17.532129",
+      "agent_name": "UniqueTest2",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test2",
+        "output_response": "result2"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "83e78d48-47e0-46ee-8dce-963e38e5bdd1",
+      "timestamp": "2026-01-15T22:51:17.552130",
+      "agent_name": "StatusTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "6f016df0-9f74-41e0-a50a-9cd286fbfea4",
+      "timestamp": "2026-01-15T22:51:17.589346",
+      "agent_name": "StatusTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "FAILURE"
+    },
+    {
+      "id": "4f493232-8ead-4184-b55c-c66d95073f71",
+      "timestamp": "2026-01-15T22:51:17.607330",
+      "agent_name": "TestAgent123",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "9692e5c5-b325-4492-a82b-be2a91dc0e74",
+      "timestamp": "2026-01-15T22:51:17.627332",
+      "agent_name": "ModelTest",
+      "model_used": "gpt-4",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "92db4ea2-4085-40b4-b392-9e3d299269c6",
+      "timestamp": "2026-01-15T22:51:17.650332",
+      "agent_name": "ActionTest",
+      "model_used": "test",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "5e8a9b06-685b-4050-9d7f-547d68d83ec8",
+      "timestamp": "2026-01-15T22:51:17.672339",
+      "agent_name": "",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2b09ed66-d474-420b-896f-ea9caf3e7ed9",
+      "timestamp": "2026-01-15T22:51:17.676336",
+      "agent_name": "EmptyModelTest",
+      "model_used": "",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "627b990b-bfd1-478d-bb34-67991b1d2cae",
+      "timestamp": "2026-01-15T22:51:17.718711",
+      "agent_name": "ValidationTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": null,
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "d137bb8f-1a7d-4f1d-818b-0e240697ee8b",
+      "timestamp": "2026-01-15T22:51:17.802710",
+      "agent_name": "ValidationTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "96b78a30-c9b8-437b-a10a-5699cde0ff73",
+      "timestamp": "2026-01-15T22:51:17.834742",
+      "agent_name": "MinimalTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "minimal",
+        "output_response": "ok"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "6ea5669c-41ad-4901-8700-53ddbf39686c",
+      "timestamp": "2026-01-15T22:51:17.852712",
+      "agent_name": "ExtraFieldTest",
+      "model_used": "test",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "custom_field": "custom_value",
+        "severity": "HIGH",
+        "line_number": 42
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "4dfc9a2b-7c0a-4583-a2ae-0f96d8157d99",
+      "timestamp": "2026-01-15T22:51:17.887710",
+      "agent_name": "NestedTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "metadata": {
+          "key1": "value1",
+          "key2": "value2"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "7ae1c23b-8a27-4dbb-9c36-4cda72f236a7",
+      "timestamp": "2026-01-15T22:51:17.910939",
+      "agent_name": "ListTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "issues": [
+          "issue1",
+          "issue2",
+          "issue3"
+        ]
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "7301e69a-ecfd-4900-b39f-ef5c2f4c31a0",
+      "timestamp": "2026-01-15T22:51:17.934975",
+      "agent_name": "FileTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "189785f9-89a2-4139-93f0-5fd525cc1f95",
+      "timestamp": "2026-01-15T22:51:17.938940",
+      "agent_name": "JSONTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2a13360b-50c7-49d2-afeb-0bf4b027c05e",
+      "timestamp": "2026-01-15T22:51:17.978939",
+      "agent_name": "ArrayTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2f1c8dcb-bffe-407d-bb3a-6bc8f88996ed",
+      "timestamp": "2026-01-15T22:51:18.005178",
+      "agent_name": "AppendTest1",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test1",
+        "output_response": "result1"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "368e9895-5741-47cd-86b5-a25caaaf7644",
+      "timestamp": "2026-01-15T22:51:18.008174",
+      "agent_name": "AppendTest2",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test2",
+        "output_response": "result2"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "04216f47-94a4-4544-b5f7-9aca29518088",
+      "timestamp": "2026-01-15T22:51:18.038175",
+      "agent_name": "StructureTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "3f1069e7-77f2-48c9-804a-c223e00076ed",
+      "timestamp": "2026-01-15T22:51:18.055174",
+      "agent_name": "TimestampTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "f2b4226e-8b75-4383-901a-44048794be27",
+      "timestamp": "2026-01-15T22:51:18.070172",
+      "agent_name": "DetailsDictTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "7e93f880-90c5-4ca1-8f86-cd3cae927faa",
+      "timestamp": "2026-01-15T22:51:18.092172",
+      "agent_name": "StatsConsistencyTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "bde82df0-c9dd-40ee-8a22-d92e7a7ba491",
+      "timestamp": "2026-01-15T22:51:18.109177",
+      "agent_name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "cd324824-dc2e-4418-9da9-73600d3e60ee",
+      "timestamp": "2026-01-15T22:51:18.113176",
+      "agent_name": "LongPromptTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "73496136-18a4-4a55-ac82-8958acdafcd4",
+      "timestamp": "2026-01-15T22:51:18.128173",
+      "agent_name": "UnicodeTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Test with émojis 🐝🔧",
+        "output_response": "Résultat avec accénts"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "5029b1bd-df31-436e-a0ce-3d5ce1a0a916",
+      "timestamp": "2026-01-15T22:51:18.145044",
+      "agent_name": "Agent-Name_123!@#",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "d6921901-6d93-4f33-a8da-c8ff38b3f76f",
+      "timestamp": "2026-01-15T22:51:18.160042",
+      "agent_name": "NumericTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "score": 95.5,
+        "count": 42,
+        "is_valid": true
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "b9eef5d5-a7bd-446c-9287-91ea08c82024",
+      "timestamp": "2026-01-15T22:51:35.361510",
+      "agent_name": "UnitTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "3ebecbf3-2f4c-4e1f-b9a8-99c4f0cd0026",
+      "timestamp": "2026-01-15T22:51:35.370476",
+      "agent_name": "UUIDTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "3165c869-398e-4e35-85b6-d510e2ad95f0",
+      "timestamp": "2026-01-15T22:51:35.389479",
+      "agent_name": "UniqueTest1",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test1",
+        "output_response": "result1"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "29469d32-dc91-4111-a5b4-97634725cbee",
+      "timestamp": "2026-01-15T22:51:35.407485",
+      "agent_name": "UniqueTest2",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test2",
+        "output_response": "result2"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "fafe1c59-4d48-4fce-bbe5-1bbd8c1f568d",
+      "timestamp": "2026-01-15T22:51:35.428516",
+      "agent_name": "StatusTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "7fc7986b-7a79-4cd3-a840-609495bdd5d7",
+      "timestamp": "2026-01-15T22:51:35.457538",
+      "agent_name": "StatusTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "FAILURE"
+    },
+    {
+      "id": "11e647f5-5c88-40c6-8df2-a42f5ba6e94f",
+      "timestamp": "2026-01-15T22:51:35.475538",
+      "agent_name": "TestAgent123",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "542d1eb7-1645-4331-b2fb-f66fc2ade329",
+      "timestamp": "2026-01-15T22:51:35.495536",
+      "agent_name": "ModelTest",
+      "model_used": "gpt-4",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "100a2c0d-f7d1-4406-a5df-5a1a72b3d3da",
+      "timestamp": "2026-01-15T22:51:35.514537",
+      "agent_name": "ActionTest",
+      "model_used": "test",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c80acba5-57a7-46ad-a9af-4bef453d088c",
+      "timestamp": "2026-01-15T22:51:35.535537",
+      "agent_name": "",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "b4045134-84a1-492d-8100-5b4bd61cec1d",
+      "timestamp": "2026-01-15T22:51:35.541539",
+      "agent_name": "EmptyModelTest",
+      "model_used": "",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "80b3de51-36fe-40f5-8630-21a0202eaedc",
+      "timestamp": "2026-01-15T22:51:35.568538",
+      "agent_name": "NonePromptTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": null,
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "d16420cd-61b3-4753-93a7-fa03a0e2f04c",
+      "timestamp": "2026-01-15T22:51:35.589542",
+      "agent_name": "EmptyPromptTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "154a3d93-654e-4251-a37c-62e389082f60",
+      "timestamp": "2026-01-15T22:51:35.613543",
+      "agent_name": "MinimalTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "minimal",
+        "output_response": "ok"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "81cff76f-7cb5-4ddd-8891-9b9c500b572b",
+      "timestamp": "2026-01-15T22:51:35.633577",
+      "agent_name": "ExtraFieldTest",
+      "model_used": "test",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "custom_field": "custom_value",
+        "severity": "HIGH",
+        "line_number": 42
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "f9e3cb17-8cbd-4b1e-8e01-cf2a615dbab8",
+      "timestamp": "2026-01-15T22:51:35.671537",
+      "agent_name": "NestedTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "metadata": {
+          "key1": "value1",
+          "key2": "value2"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "94465731-98a3-42c2-87ef-7ccf1f25e827",
+      "timestamp": "2026-01-15T22:51:35.694558",
+      "agent_name": "ListTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "issues": [
+          "issue1",
+          "issue2",
+          "issue3"
+        ]
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "0c2ea451-1db5-4f81-8b00-5c1aa809da70",
+      "timestamp": "2026-01-15T22:51:35.715557",
+      "agent_name": "FileTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "f9a3269b-013c-4112-955d-41ca2d09eae7",
+      "timestamp": "2026-01-15T22:51:35.721542",
+      "agent_name": "JSONTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c3d343b6-1449-42c8-b018-fdb78a299159",
+      "timestamp": "2026-01-15T22:51:35.751346",
+      "agent_name": "ArrayTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "f3091992-2f95-494a-8599-6704c85ce1fd",
+      "timestamp": "2026-01-15T22:51:35.773482",
+      "agent_name": "AppendTest1",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test1",
+        "output_response": "result1"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "30d498e1-edd4-4780-958f-d1301f9b0595",
+      "timestamp": "2026-01-15T22:51:35.777538",
+      "agent_name": "AppendTest2",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test2",
+        "output_response": "result2"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "0d2e5d16-16e5-43b9-a5e9-c97da835df50",
+      "timestamp": "2026-01-15T22:51:35.808631",
+      "agent_name": "StructureTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "b9e137e0-74cf-4e00-87ae-c40c81d2db84",
+      "timestamp": "2026-01-15T22:51:35.827430",
+      "agent_name": "TimestampTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "61a56bf9-cf76-42f1-911b-1806e9c3881b",
+      "timestamp": "2026-01-15T22:51:35.846494",
+      "agent_name": "DetailsDictTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "3651f228-7821-4fe8-9d2b-214569def636",
+      "timestamp": "2026-01-15T22:51:36.072318",
+      "agent_name": "StatsConsistencyTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "145dba93-d03a-4a01-a8d6-0eb9e73df303",
+      "timestamp": "2026-01-15T22:51:36.113351",
+      "agent_name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2e531a6e-8ff5-487c-816c-0bce2417896b",
+      "timestamp": "2026-01-15T22:51:36.120128",
+      "agent_name": "LongPromptTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "4b4070ed-12e9-41dd-97b9-821ea176a23b",
+      "timestamp": "2026-01-15T22:51:36.138127",
+      "agent_name": "UnicodeTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Test with émojis 🐝🔧",
+        "output_response": "Résultat avec accénts"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "98e92de6-bad0-45f4-9595-030b5a53606e",
+      "timestamp": "2026-01-15T22:51:36.155112",
+      "agent_name": "Agent-Name_123!@#",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "fe247ebd-a019-4ab7-bc29-413f4de57dd7",
+      "timestamp": "2026-01-15T22:51:36.174116",
+      "agent_name": "NumericTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "score": 95.5,
+        "count": 42,
+        "is_valid": true
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "5989feb4-565b-46e7-b962-f46eff599228",
+      "timestamp": "2026-01-15T22:54:17.305614",
+      "agent_name": "UnitTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "943e9fe5-2c69-47f4-96d5-121df06be3c8",
+      "timestamp": "2026-01-15T22:54:17.312746",
+      "agent_name": "UUIDTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "349d2728-3ca8-42e0-8cfc-8c78668e58c3",
+      "timestamp": "2026-01-15T22:54:17.339724",
+      "agent_name": "UniqueTest1",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test1",
+        "output_response": "result1"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "b063538a-f47c-495d-a718-ca5e50584ba1",
+      "timestamp": "2026-01-15T22:54:17.363826",
+      "agent_name": "UniqueTest2",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test2",
+        "output_response": "result2"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "ec419cf6-c679-4bce-ad74-b19270eebd67",
+      "timestamp": "2026-01-15T22:54:17.387826",
+      "agent_name": "StatusTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "db7e6e4b-1fd3-4f1d-9b83-4f352eec6db6",
+      "timestamp": "2026-01-15T22:54:17.429197",
+      "agent_name": "StatusTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "FAILURE"
+    },
+    {
+      "id": "e6a65838-617f-425a-a36f-ef97b37c2c33",
+      "timestamp": "2026-01-15T22:54:17.449394",
+      "agent_name": "TestAgent123",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "24dcb42d-203a-4797-a117-343590a60353",
+      "timestamp": "2026-01-15T22:54:17.470396",
+      "agent_name": "ModelTest",
+      "model_used": "gpt-4",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "719c3960-eaf2-4ee6-8894-3f4db15bfdf7",
+      "timestamp": "2026-01-15T22:54:17.491390",
+      "agent_name": "ActionTest",
+      "model_used": "test",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "bee64cf0-ee5d-4a15-b633-187d0189e30d",
+      "timestamp": "2026-01-15T22:54:17.511415",
+      "agent_name": "",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "59bebb41-22e9-41af-b676-560ad72d541a",
+      "timestamp": "2026-01-15T22:54:17.520390",
+      "agent_name": "EmptyModelTest",
+      "model_used": "",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "99437f13-8f82-4240-b24c-c8595b5d5a14",
+      "timestamp": "2026-01-15T22:54:17.588390",
+      "agent_name": "NonePromptTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": null,
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c04b5afa-a03d-43f7-bcbd-584c0491ddcb",
+      "timestamp": "2026-01-15T22:54:17.618391",
+      "agent_name": "EmptyPromptTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "4be2cffe-0389-4801-be01-8124f7cdb3ba",
+      "timestamp": "2026-01-15T22:54:17.646787",
+      "agent_name": "MinimalTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "minimal",
+        "output_response": "ok"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "5c22e152-8c89-4cd1-a8de-2d533f968a78",
+      "timestamp": "2026-01-15T22:54:17.662174",
+      "agent_name": "ExtraFieldTest",
+      "model_used": "test",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "custom_field": "custom_value",
+        "severity": "HIGH",
+        "line_number": 42
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "ed273482-b4b0-46ac-ac12-80f2374a7c7e",
+      "timestamp": "2026-01-15T22:54:17.688202",
+      "agent_name": "NestedTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "metadata": {
+          "key1": "value1",
+          "key2": "value2"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "cd919f1d-6087-44ec-8c41-11e230598367",
+      "timestamp": "2026-01-15T22:54:17.711228",
+      "agent_name": "ListTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "issues": [
+          "issue1",
+          "issue2",
+          "issue3"
+        ]
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "82a9ac34-a616-4209-9536-5b8b681cf061",
+      "timestamp": "2026-01-15T22:54:17.728206",
+      "agent_name": "FileTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2920139c-6e64-4b4b-aeaf-e6222f133ee5",
+      "timestamp": "2026-01-15T22:54:17.734200",
+      "agent_name": "JSONTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "af5e3387-ff90-4426-8a57-112a08173442",
+      "timestamp": "2026-01-15T22:54:17.762205",
+      "agent_name": "ArrayTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "b07f6415-2b60-42cb-9268-56dd9f1d7750",
+      "timestamp": "2026-01-15T22:54:17.784203",
+      "agent_name": "AppendTest1",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test1",
+        "output_response": "result1"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "456cb129-9468-4444-9f90-ab3739ab803a",
+      "timestamp": "2026-01-15T22:54:17.788202",
+      "agent_name": "AppendTest2",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test2",
+        "output_response": "result2"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "6e937d29-e55b-4c3c-b1bb-b45609439920",
+      "timestamp": "2026-01-15T22:54:17.820124",
+      "agent_name": "StructureTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "dc383ff7-7273-46a9-a702-ea20a5250aaa",
+      "timestamp": "2026-01-15T22:54:17.835627",
+      "agent_name": "TimestampTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "ccb41cb0-a75c-4f44-b8ab-caed8828ea1d",
+      "timestamp": "2026-01-15T22:54:17.852626",
+      "agent_name": "DetailsDictTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "069a4bd8-855e-4aa3-a2a7-f648a96f6233",
+      "timestamp": "2026-01-15T22:54:17.994688",
+      "agent_name": "StatsConsistencyTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "3f1bc22e-67e3-4822-8dc2-1836860ae304",
+      "timestamp": "2026-01-15T22:54:18.030686",
+      "agent_name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "1f912ea5-8f35-4188-bb2a-e98dac53f491",
+      "timestamp": "2026-01-15T22:54:18.035725",
+      "agent_name": "LongPromptTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "b2b028c4-8b6b-4223-a12e-abe6f412beb9",
+      "timestamp": "2026-01-15T22:54:18.051139",
+      "agent_name": "UnicodeTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Test with émojis 🐝🔧",
+        "output_response": "Résultat avec accénts"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "90124a17-f773-40dd-9bcb-2371cafba149",
+      "timestamp": "2026-01-15T22:54:18.067079",
+      "agent_name": "Agent-Name_123!@#",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "a6a8dfe1-fac0-45fa-bc6f-c45102eff24b",
+      "timestamp": "2026-01-15T22:54:18.085426",
+      "agent_name": "NumericTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "score": 95.5,
+        "count": 42,
+        "is_valid": true
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "224769f4-e9ac-4ba3-ae97-975e81a1c214",
+      "timestamp": "2026-01-15T22:54:41.244062",
+      "agent_name": "UnitTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "1ebd10be-9e69-4bda-a703-6cdb18f3f1d2",
+      "timestamp": "2026-01-15T22:54:41.253014",
+      "agent_name": "UUIDTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "e268730a-2ef6-4e4e-8ad2-d65709c58bfb",
+      "timestamp": "2026-01-15T22:54:41.273376",
+      "agent_name": "UniqueTest1",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test1",
+        "output_response": "result1"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "1ce07903-8001-49eb-9334-c77b526b596d",
+      "timestamp": "2026-01-15T22:54:41.290430",
+      "agent_name": "UniqueTest2",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test2",
+        "output_response": "result2"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "6f5dc55d-8486-4fd9-a23b-257ccaef909f",
+      "timestamp": "2026-01-15T22:54:41.309480",
+      "agent_name": "StatusTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "0b6a65a3-a18c-41b1-9144-ecafe1593f3f",
+      "timestamp": "2026-01-15T22:54:41.341181",
+      "agent_name": "StatusTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "FAILURE"
+    },
+    {
+      "id": "05b900ca-90dc-4ea3-b64f-990fb8a4f0e9",
+      "timestamp": "2026-01-15T22:54:41.359140",
+      "agent_name": "TestAgent123",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2494d72e-4592-41db-bca7-966b009df238",
+      "timestamp": "2026-01-15T22:54:41.376147",
+      "agent_name": "ModelTest",
+      "model_used": "gpt-4",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "e8163a03-c21d-4227-9dfe-df2e8a14f8ac",
+      "timestamp": "2026-01-15T22:54:41.393172",
+      "agent_name": "ActionTest",
+      "model_used": "test",
+      "action": "GENERATION",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "5c5d7fa2-9ac7-4011-82b6-59c03306b786",
+      "timestamp": "2026-01-15T22:54:41.410657",
+      "agent_name": "",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2f9937d4-dfc4-4745-acdb-54fa702f0b6f",
+      "timestamp": "2026-01-15T22:54:41.417665",
+      "agent_name": "EmptyModelTest",
+      "model_used": "",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c175f27b-3ad6-48e9-8d8a-87e5d1a1c71a",
+      "timestamp": "2026-01-15T22:54:41.439583",
+      "agent_name": "NonePromptTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": null,
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "61613078-6131-46d5-b462-8b0b183f44ff",
+      "timestamp": "2026-01-15T22:54:41.461046",
+      "agent_name": "EmptyPromptTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "317a4bbe-6c82-4966-b23b-669857e913cf",
+      "timestamp": "2026-01-15T22:54:41.495919",
+      "agent_name": "MinimalTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "minimal",
+        "output_response": "ok"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "186b4cdd-416f-422b-a80f-8bd59eee5f9d",
+      "timestamp": "2026-01-15T22:54:41.519918",
+      "agent_name": "ExtraFieldTest",
+      "model_used": "test",
+      "action": "DEBUG",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "custom_field": "custom_value",
+        "severity": "HIGH",
+        "line_number": 42
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "fe2a2628-d448-40b2-9878-0aa4ce6a6d2b",
+      "timestamp": "2026-01-15T22:54:41.561020",
+      "agent_name": "NestedTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "metadata": {
+          "key1": "value1",
+          "key2": "value2"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "88d23922-dc40-493d-aa89-cb6f54a7be94",
+      "timestamp": "2026-01-15T22:54:41.621527",
+      "agent_name": "ListTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "issues": [
+          "issue1",
+          "issue2",
+          "issue3"
+        ]
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "ea7cb8a3-e0c2-4fc8-9d8c-e266fa3edcc8",
+      "timestamp": "2026-01-15T22:54:41.684528",
+      "agent_name": "FileTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "f7820c38-b3b8-4143-b37c-2151589ad512",
+      "timestamp": "2026-01-15T22:54:41.694530",
+      "agent_name": "JSONTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "4ee52ea2-d1a9-4fa6-aca5-cd0ac8169b12",
+      "timestamp": "2026-01-15T22:54:41.732527",
+      "agent_name": "ArrayTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "aa4e3e9b-1127-4b9a-bf41-ad3ba20bb07d",
+      "timestamp": "2026-01-15T22:54:41.752526",
+      "agent_name": "AppendTest1",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test1",
+        "output_response": "result1"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "a4208f41-b91e-41bd-a700-ae6c3efd97f1",
+      "timestamp": "2026-01-15T22:54:41.759525",
+      "agent_name": "AppendTest2",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test2",
+        "output_response": "result2"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "ea21e2ca-ad4c-4bdc-b936-ce4600bcfd7c",
+      "timestamp": "2026-01-15T22:54:41.791527",
+      "agent_name": "StructureTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "681ab5ae-0d6c-4a67-a564-dafc68f32251",
+      "timestamp": "2026-01-15T22:54:41.816529",
+      "agent_name": "TimestampTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "3d808d62-832b-405e-9c6e-723bbb8b18da",
+      "timestamp": "2026-01-15T22:54:41.837537",
+      "agent_name": "DetailsDictTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2f60b202-7256-4803-b22b-470adaa247cc",
+      "timestamp": "2026-01-15T22:54:41.870955",
+      "agent_name": "StatsConsistencyTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "cf43a69c-da88-4fce-ac04-48c8e7a63af8",
+      "timestamp": "2026-01-15T22:54:41.894955",
+      "agent_name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "08d83c8f-b2a8-4a19-8516-d316daf98942",
+      "timestamp": "2026-01-15T22:54:41.906956",
+      "agent_name": "LongPromptTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "8e0fb858-0315-40e0-ad15-299cc33931e8",
+      "timestamp": "2026-01-15T22:54:41.931243",
+      "agent_name": "UnicodeTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Test with émojis 🐝🔧",
+        "output_response": "Résultat avec accénts"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "1ff80de6-bce9-43f6-a529-52ad68c7f5e0",
+      "timestamp": "2026-01-15T22:54:41.955681",
+      "agent_name": "Agent-Name_123!@#",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "4c5fd3f9-9a63-4a4a-8940-fe02a2a1feab",
+      "timestamp": "2026-01-15T22:54:41.982691",
+      "agent_name": "NumericTest",
+      "model_used": "test",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "test",
+        "output_response": "result",
+        "score": 95.5,
+        "count": 42,
+        "is_valid": true
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "e564da02-8d20-4f2e-ba5d-c6d366788204",
+      "timestamp": "2026-01-15T23:02:19.392859",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting system on target directory ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "dc9269ac-9295-456c-8060-fbaf13977a31",
+      "timestamp": "2026-01-15T23:02:54.532054",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "07424608-4384-44ed-8de3-c75ce329bc96",
+      "timestamp": "2026-01-15T23:03:26.649026",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "00e53946-0f03-4041-a9f3-f658fa03b0bf",
+      "timestamp": "2026-01-15T23:03:26.719313",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_code_quality.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "c87607ef-1652-478f-af75-325ab9ca484a",
+      "timestamp": "2026-01-15T23:03:26.736622",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_logic_errors.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2c3bc9c3-5d2e-4fcc-9923-4ecab16e4be6",
+      "timestamp": "2026-01-15T23:03:26.758549",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_mixed_errors.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "ce1dc160-e18a-4ece-8fc1-d04a9796a1cb",
+      "timestamp": "2026-01-15T23:03:26.776665",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_runtime_errors.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "800a3730-412c-448f-9b02-f1682d397791",
+      "timestamp": "2026-01-15T23:03:26.792578",
+      "agent_name": "Orchestrator",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Self-healing workflow on: sandbox\\test_cases\\buggy_syntax_errors.py",
+        "output_response": "Completed in 1 iteration(s), completed=True"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "e413c35d-807a-4574-9c1c-3f25c2cacc23",
+      "timestamp": "2026-01-15T23:06:05.209530",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "d992f2bb-2a1e-4d70-aec1-1b72e97149e5",
+      "timestamp": "2026-01-15T23:06:05.217494",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "5a049b24-e7ac-48b6-a4c3-e75b568cb323",
+      "timestamp": "2026-01-15T23:08:07.890507",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "bc89a5b5-660c-4500-a49e-b148fc5f7c1c",
+      "timestamp": "2026-01-15T23:08:07.899466",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "69d3025e-a1fd-4f7e-899c-e5a789b2d988",
+      "timestamp": "2026-01-15T23:08:48.007267",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "```json\n{\n    \"issues\": [\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 9,\n            \"line_end\": 10,\n            \"severity\": \"medium\",\n            \"category\": \"maintainability\",\n            \"description\": \"Global variables `users` and `admin_password` are used. Global state makes code harder to reason about, test, and maintain. `admin_password` is also a hardcoded sensitive value.\",\n            \"recommendation\": \"Encapsulate user data within a class (e.g., `UserManager` instance) and pass it explicitly. For `admin_password`, use environment variables or a secure configuration management system.\",\n            \"impact\": \"Improved encapsulation, reduced side effects, enhanced security, and easier testing.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 10,\n            \"line_end\": 10,\n            \"severity\": \"high\",\n            \"category\": \"security\",\n            \"description\": \"Hardcoded sensitive information (`admin_password`). This is a security vulnerability.\",\n            \"recommendation\": \"Remove hardcoded password. Use environment variables, a secrets management service, or prompt for input at runtime. Never store sensitive data directly in code.\",\n            \"impact\": \"Significantly improved security posture and reduced risk of credential exposure.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 11,\n            \"line_end\": 11,\n            \"severity\": \"low\",\n            \"category\": \"code_smell\",\n            \"description\": \"Debug flag `DEBUG` is a global variable. Debug prints are left in production code.\",\n            \"recommendation\": \"Remove debug prints or replace them with a proper logging framework (e.g., Python's `logging` module) configured to output debug messages only in development environments.\",\n            \"impact\": \"Cleaner code, improved performance (no unnecessary I/O), and better control over logging verbosity.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 14,\n            \"line_end\": 16,\n            \"severity\": \"low\",\n            \"category\": \"code_smell\",\n            \"description\": \"Unused imports (`sys`, `json`) and unused variable (`unused_var`).\",\n            \"recommendation\": \"Remove unused imports and variables to keep the codebase clean and reduce potential confusion. Use a linter to identify these automatically.\",\n            \"impact\": \"Improved code readability and reduced bundle size (for larger projects).\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 18,\n            \"line_end\": 25,\n            \"severity\": \"medium\",\n            \"category\": \"maintainability\",\n            \"description\": \"Function `add_user` lacks docstrings and type hints, violating PEP 8 for spacing, and uses a global variable. It also contains a debug print.\",\n            \"recommendation\": \"Add a docstring explaining the function's purpose, parameters, and return value. Add type hints for parameters and return value. Fix PEP 8 spacing. Remove the debug print or replace with proper logging. Pass `users` as an argument instead of using a global.\",\n            \"impact\": \"Improved code readability, maintainability, and static analysis capabilities.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 27,\n            \"line_end\": 38,\n            \"severity\": \"medium\",\n            \"category\": \"code_smell\",\n            \"description\": \"Function `delete_user` has overly complex logic for finding and deleting an item by index. It also uses a redundant `== True` check and a global variable.\",\n            \"recommendation\": \"Simplify the deletion logic. If deleting by index, use `users.pop(user_id)` with bounds checking. If deleting by a user object, use `users.remove(user)`. Remove `== True`. Pass `users` as an argument.\",\n            \"impact\": \"Cleaner, more Pythonic, and less error-prone code.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 40,\n            \"line_end\": 40,\n            \"severity\": \"low\",\n            \"category\": \"maintainability\",\n            \"description\": \"Class `UserManager` is missing a docstring.\",\n            \"recommendation\": \"Add a docstring to explain the purpose of the `UserManager` class.\",\n            \"impact\": \"Improved code documentation and readability.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 42,\n            \"line_end\": 46,\n            \"severity\": \"medium\",\n            \"category\": \"architecture\",\n            \"description\": \"Method `validate_email` is defined as an instance method but does not use `self`. It should be a `staticmethod` or a standalone function.\",\n            \"recommendation\": \"Change `validate_email` to a `staticmethod` using the `@staticmethod` decorator, or move it outside the class if it doesn't logically belong to `UserManager`.\",\n            \"impact\": \"Correct class design and clearer intent.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 48,\n            \"line_end\": 52,\n            \"severity\": \"medium\",\n            \"category\": \"architecture\",\n            \"description\": \"Method `validate_password` is defined as an instance method but does not use `self`. It should be a `staticmethod` or a standalone function. It also uses a 'magic number' (8) for password length.\",\n            \"recommendation\": \"Change `validate_password` to a `staticmethod`. Replace the magic number `8` with a named constant (e.g., `MIN_PASSWORD_LENGTH`) for clarity and easier modification.\",\n            \"impact\": \"Correct class design, improved readability, and easier maintenance of constants.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 54,\n            \"line_end\": 57,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Method `get_user_info` is defined as an instance method but does not use `self`. It directly accesses the global `users` list and lacks error handling for invalid `user_id`.\",\n            \"recommendation\": \"Change `get_user_info` to an instance method that takes `self` and manages its own user data (not global `users`). Add error handling (e.g., `try-except IndexError`) or return `None` for invalid `user_id`.\",\n            \"impact\": \"Prevents runtime crashes (IndexError), improves robustness, and adheres to object-oriented principles.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 60,\n            \"line_end\": 66,\n            \"severity\": \"medium\",\n            \"category\": \"code_smell\",\n            \"description\": \"Duplicated code across `calculate_age_in_months`, `calculate_age_in_days`, and `calculate_age_in_hours`. All perform a similar calculation (years * constant).\",\n            \"recommendation\": \"Refactor these into a single, more generic function that takes `years` and a `multiplier` (or a unit string) as arguments, or use a dictionary to map units to multipliers.\",\n            \"impact\": \"Reduced code duplication, improved maintainability, and easier addition of new age units.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 69,\n            \"line_end\": 70,\n            \"severity\": \"low\",\n            \"category\": \"code_smell\",\n            \"description\": \"Dead code: `old_function_not_used` is defined but never called.\",\n            \"recommendation\": \"Remove `old_function_not_used` if it's truly unused. If it's intended for future use, add a comment explaining its purpose or remove it and add it back when needed (YAGNI).\",\n            \"impact\": \"Cleaner codebase, reduced cognitive load, and smaller file size.\"\n        },\n        {\n            \"file\": \"buggy_code_quality.py\",\n            \"line_start\": 73,\n            \"line_end\": 73,\n            \"severity\": \"medium\",\n            \"category\": \"code_smell\",\n            \"description\": \"The description indicates 'Too many nested conditions' in `check_user_permissions`. While the full code is truncated, this is a common code smell.\",\n            \"recommendation\": \"Refactor nested `if` statements using guard clauses, early returns, or by breaking down the logic into smaller, more focused functions. Consider using a policy object or state pattern for complex permission checks.\",\n            \"impact\": \"Improved readability, reduced cyclomatic complexity, and easier testing.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 6,\n            \"line_end\": 9,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Function `calculate_discount` incorrectly adds the discount instead of subtracting it from the price.\",\n            \"recommendation\": \"Change `price + (price * discount_percent / 100)` to `price - (price * discount_percent / 100)`.\",\n            \"impact\": \"Correct calculation of discounted prices, ensuring business logic is accurate.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 13,\n            \"line_end\": 21,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Function `find_maximum` has two logic errors: it initializes `max_num` with the first element but then iterates over all elements including the first, and the comparison `num < max_num` is incorrect for finding the maximum.\",\n            \"recommendation\": \"Initialize `max_num` with `float('-inf')` or iterate from the second element. Change `if num < max_num` to `if num > max_num`. Alternatively, use `max(numbers)` for a more Pythonic solution.\",\n            \"impact\": \"Correct identification of the maximum number in a list.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 24,\n            \"line_end\": 26,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Function `is_even` incorrectly checks for odd numbers (`== 1`) instead of even numbers (`== 0`) using the modulo operator.\",\n            \"recommendation\": \"Change `return number % 2 == 1` to `return number % 2 == 0`.\",\n            \"impact\": \"Accurate determination of whether a number is even.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 29,\n            \"line_end\": 36,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Function `calculate_factorial` has an off-by-one error in its loop, causing it to calculate `(n-1)!` instead of `n!`.\",\n            \"recommendation\": \"Change `for i in range(1, n)` to `for i in range(1, n + 1)`.\",\n            \"impact\": \"Correct calculation of factorials.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 39,\n            \"line_end\": 43,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Function `reverse_string` incorrectly appends characters in forward order, effectively copying the string instead of reversing it.\",\n            \"recommendation\": \"Change the loop to append characters from the end of the original string: `reversed_text += text[len(text) - 1 - i]`. A more Pythonic solution is `return text[::-1]`.\",\n            \"impact\": \"Correct reversal of strings.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 50,\n            \"line_end\": 53,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Method `deposit` in `BankAccount` incorrectly subtracts the deposit amount instead of adding it.\",\n            \"recommendation\": \"Change `self.balance -= amount` to `self.balance += amount`.\",\n            \"impact\": \"Correct handling of deposits in bank accounts.\"\n        },\n        {\n            \"file\": \"buggy_logic_errors.py\",\n            \"line_start\": 56,\n            \"line_end\": 60,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Method `withdraw` in `BankAccount` incorrectly adds the withdrawal amount instead of subtracting it.\",\n            \"recommendation\": \"Change `self.balance += amount` to `self.balance -= amount`.\",\n            \"impact\": \"Correct handling of withdrawals in bank accounts.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 7,\n            \"line_end\": 7,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing colon after class definition `class ShoppingCart`.\",\n            \"recommendation\": \"Add a colon: `class ShoppingCart:`.\",\n            \"impact\": \"Allows the code to be parsed and executed.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 15,\n            \"line_end\": 18,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Method `add_item` incorrectly stores `price * quantity` as the item's price and always sets `quantity` to 1. This leads to incorrect item pricing and quantity tracking.\",\n            \"recommendation\": \"Store `price` and `quantity` separately in the item dictionary. The `quantity` parameter should be used for the item's quantity.\",\n            \"impact\": \"Accurate tracking of item prices and quantities in the shopping cart.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 20,\n            \"line_end\": 25,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Method `remove_item` is missing the `self` parameter, causing a `NameError` when `self.items` is accessed.\",\n            \"recommendation\": \"Add `self` as the first parameter to the method definition: `def remove_item(self, item_name):`.\",\n            \"impact\": \"Allows the method to correctly access instance attributes and prevents runtime crashes.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 28,\n            \"line_end\": 32,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Method `calculate_subtotal` incorrectly sums `item['price']` without considering the actual quantity of each item (which is also flawed by `add_item`).\",\n            \"recommendation\": \"Modify `add_item` to store `price` and `quantity` separately. Then, `calculate_subtotal` should sum `item['price'] * item['quantity']`.\",\n            \"impact\": \"Correct calculation of the shopping cart's subtotal.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 34,\n            \"line_end\": 37,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Method `apply_discount` incorrectly adds the discount percentage to `self.discount_rate` instead of setting it or applying it as a reduction.\",\n            \"recommendation\": \"The intent is unclear, but if `percent` is the new discount rate, it should be `self.discount_rate = percent`. If it's an additional discount, the logic for applying it to the total needs to be defined.\",\n            \"impact\": \"Correct application of discounts to the shopping cart.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 39,\n            \"line_end\": 39,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing colon after method definition `def calculate_total(self)`.\",\n            \"recommendation\": \"Add a colon: `def calculate_total(self):`.\",\n            \"impact\": \"Allows the method to be parsed and executed.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 42,\n            \"line_end\": 42,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"In `calculate_total`, `discount_amount = subtotal - self.discount_rate` is an incorrect formula for calculating a discount amount.\",\n            \"recommendation\": \"The discount amount should be calculated as `subtotal * self.discount_rate` (assuming `self.discount_rate` is a decimal percentage).\",\n            \"impact\": \"Correct calculation of the total price after discount.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 45,\n            \"line_end\": 45,\n            \"severity\": \"medium\",\n            \"category\": \"code_smell\",\n            \"description\": \"Magic number `0.10` used for tax rate in `calculate_total`.\",\n            \"recommendation\": \"Replace `0.10` with a named constant (e.g., `self.TAX_RATE` or `DEFAULT_TAX_RATE`) for clarity and easier modification.\",\n            \"impact\": \"Improved readability and maintainability.\"\n        },\n        {\n            \"file\": \"buggy_mixed_errors.py\",\n            \"line_start\": 49,\n            \"line_end\": 49,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Method `get_item_count` incorrectly returns the number of unique items instead of the total quantity of all items.\",\n            \"recommendation\": \"Iterate through `self.items` and sum the `quantity` of each item (after fixing the `add_item` logic).\",\n            \"impact\": \"Accurate reporting of the total number of items in the cart.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 6,\n            \"line_end\": 8,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Function `divide_numbers` does not handle division by zero, which will cause a `ZeroDivisionError`.\",\n            \"recommendation\": \"Add a check for `b == 0` and raise a `ValueError`, return `None`, or handle the error appropriately.\",\n            \"impact\": \"Prevents application crashes and improves robustness.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 11,\n            \"line_end\": 13,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Function `get_user_name` does not check if the 'name' key exists in `user_dict`, which will cause a `KeyError` if missing.\",\n            \"recommendation\": \"Use `user_dict.get('name')` with a default value, or use a `try-except KeyError` block.\",\n            \"impact\": \"Prevents application crashes and provides graceful handling of missing data.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 16,\n            \"line_end\": 20,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Function `process_list` accesses `items[0]` and `items[-1]` without checking if the list is empty, which will cause an `IndexError`.\",\n            \"recommendation\": \"Add a check `if not items:` and handle the empty list case (e.g., return `None` or raise a `ValueError`).\",\n            \"impact\": \"Prevents application crashes and improves robustness for edge cases.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 23,\n            \"line_end\": 27,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Function `read_file_content` does not handle `FileNotFoundError` if the specified file does not exist.\",\n            \"recommendation\": \"Wrap the file operation in a `try-except FileNotFoundError` block to handle missing files gracefully.\",\n            \"impact\": \"Prevents application crashes and provides better user feedback for file operations.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 30,\n            \"line_end\": 34,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Function `calculate_average` does not check for an empty list, which will cause a `ZeroDivisionError` when `len(numbers)` is 0.\",\n            \"recommendation\": \"Add a check `if not numbers:` and handle the empty list case (e.g., return `0` or raise a `ValueError`).\",\n            \"impact\": \"Prevents application crashes and ensures correct behavior for empty input.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 41,\n            \"line_end\": 43,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Method `get_item` in `DataProcessor` does not perform bounds checking, leading to an `IndexError` for invalid indices.\",\n            \"recommendation\": \"Add bounds checking (e.g., `if 0 <= index < len(self.data):`) or wrap access in a `try-except IndexError` block.\",\n            \"impact\": \"Prevents application crashes and improves data access safety.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 46,\n            \"line_end\": 48,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Method `convert_to_number` does not handle `ValueError` for invalid input that cannot be converted to an integer.\",\n            \"recommendation\": \"Wrap the `int(value)` conversion in a `try-except ValueError` block to handle non-numeric input gracefully.\",\n            \"impact\": \"Prevents application crashes and provides robust data type conversion.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 51,\n            \"line_end\": 53,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Method `access_nested_data` does not validate the structure of the `obj` dictionary, leading to potential `KeyError` or `TypeError` if keys or types are unexpected.\",\n            \"recommendation\": \"Use `dict.get()` with default values for safe access, or implement robust validation and error handling (e.g., `try-except` blocks for `KeyError`/`TypeError`).\",\n            \"impact\": \"Prevents application crashes and improves robustness when dealing with complex data structures.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 56,\n            \"line_end\": 62,\n            \"severity\": \"high\",\n            \"category\": \"logic_error\",\n            \"description\": \"Function `infinite_loop_risk` has a potential infinite loop if `n` is 0 or negative, as `i` will never reach `n` and the `if n == 0` check is inside the loop, making it too late.\",\n            \"recommendation\": \"Add an initial check `if n <= 0: return 0` before the loop. The `if n == 0` inside the loop is redundant and misplaced.\",\n            \"impact\": \"Prevents application hangs and ensures correct termination for all valid inputs.\"\n        },\n        {\n            \"file\": \"buggy_runtime_errors.py\",\n            \"line_start\": 65,\n            \"line_end\": 65,\n            \"severity\": \"medium\",\n            \"category\": \"performance\",\n            \"description\": \"Function `memory_leak_risk` is described as creating a large data structure without cleanup, indicating a potential memory leak or excessive resource consumption.\",\n            \"recommendation\": \"Ensure that large data structures are properly deallocated or managed, especially in long-running processes. Consider using context managers, generators, or explicit `del` statements if necessary, or refactor to process data in chunks.\",\n            \"impact\": \"Improved resource management, preventing out-of-memory errors and performance degradation.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 6,\n            \"line_end\": 7,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing colon at the end of function definition `def add_numbers(a, b)`.\",\n            \"recommendation\": \"Add a colon: `def add_numbers(a, b):`.\",\n            \"impact\": \"Allows the code to be parsed and executed.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 11,\n            \"line_end\": 11,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing closing parenthesis for the `print` statement.\",\n            \"recommendation\": \"Add a closing parenthesis: `print(f\\\"Result is {result}\\\")`.\",\n            \"impact\": \"Allows the code to be parsed and executed.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 14,\n            \"line_end\": 14,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing colon after class name `class Calculator`.\",\n            \"recommendation\": \"Add a colon: `class Calculator:`.\",\n            \"impact\": \"Allows the code to be parsed and executed.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 22,\n            \"line_end\": 24,\n            \"severity\": \"high\",\n            \"category\": \"runtime_error\",\n            \"description\": \"Method `calculate_average` is missing the `self` parameter, causing a `NameError` if called as an instance method.\",\n            \"recommendation\": \"Add `self` as the first parameter: `def calculate_average(self, numbers):`. If it's intended to be a static method, use `@staticmethod`.\",\n            \"impact\": \"Allows the method to be called correctly and prevents runtime crashes.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 28,\n            \"line_end\": 29,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Indentation error in function `subtract`. The `result` line is not indented.\",\n            \"recommendation\": \"Indent `result = a - b` and `return result` by 4 spaces (or 1 tab) to match the function body.\",\n            \"impact\": \"Allows the code to be parsed and executed.\"\n        },\n        {\n            \"file\": \"buggy_syntax_errors.py\",\n            \"line_start\": 32,\n            \"line_end\": 32,\n            \"severity\": \"high\",\n            \"category\": \"syntax_error\",\n            \"description\": \"Missing comma between parameters `base` and `exponent` in function definition `def power(base exponent):`.\",\n            \"recommendation\": \"Add a comma: `def power(base, exponent):`.\",\n            \"impact\": \"Allows the code to be parsed and executed.\"\n        }\n    ],\n    \"summary\": {\n        \"total_issues\": 44,\n        \"high_severity\": 33,\n        \"medium_severity\": 9,\n        \"low_severity\": 2\n    }\n}\n```",
+        "issues_found": 45
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2fb0a53c-4cad-40d3-af43-20ea3c4e5f1d",
+      "timestamp": "2026-01-15T23:08:48.015257",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "FIX",
+      "details": {
+        "file": "sandbox\\test_cases\\buggy_code_quality.py",
+        "issue": "Global variables `users` and `admin_password` are used. Global state makes code harder to reason about, test, and maintain. `admin_password` is also a hardcoded sensitive value.",
+        "input_prompt": "Generating fix for: Global variables `users` and `admin_password` are used. Global state makes code harder to reason about, test, and maintain. `admin_password` is also a hardcoded sensitive value.",
+        "output_response": "Fix generation started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "7f389fe2-0f87-4f11-8505-ba26d8a2c51f",
+      "timestamp": "2026-01-15T23:09:19.106459",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "FIX",
+      "details": {
+        "file": "sandbox\\test_cases\\buggy_code_quality.py",
+        "input_prompt": "Generating fix for: Global variables `users` and `admin_password` are used. Global state makes code harder to reason about, test, and maintain. `admin_password` is also a hardcoded sensitive value.",
+        "output_response": "```json\n{\n    \"file\": \"sandbox\\\\test_cases\\\\buggy_code_quality.py\",\n    \"original_code\": \"users = []\\nadmin_password = \\\"12345\\\"  # Hardcoded password\",\n    \"fixed_code\": \"import os\\n\\n# The global 'users' variable has been removed. It should be encapsulated within a UserManager class and passed explicitly.\\n# This change will require further refactoring where 'users' is accessed.\\nadmin_password = os.getenv(\\\"ADMIN_PASSWORD\\\", \\\"12345\\\")\",\n    \"explanation\": \"This fix addresses two code quality issues:\\n\\n1.  **Global `users` variable**: The global `users` list has been removed. Global mutable state makes code harder to reason about, test, and maintain. As per the recommendation, `users` should be encapsulated within a `UserManager` class instance and passed explicitly to functions/methods that need it. This change is a foundational step towards that refactoring and will require subsequent changes where `users` was previously accessed.\\n\\n2.  **Hardcoded `admin_password`**: The hardcoded `admin_password` has been replaced with a call to `os.getenv(\\\"ADMIN_PASSWORD\\\", \\\"12345\\\")`. This addresses the security concern of hardcoded sensitive values and moves towards using environment variables for configuration. The original value \\\"12345\\\" is kept as a fallback to maintain existing behavior if the `ADMIN_PASSWORD` environment variable is not set, but it is strongly recommended to set `ADMIN_PASSWORD` in the environment for production use.\\n\\n3.  **`import os`**: `import os` has been added to enable the use of `os.getenv`. While typically imports are placed at the top of the file, it is included within this fix block to make the change self-contained within the specified line range.\",\n    \"line_start\": 9,\n    \"line_end\": 10,\n    \"confidence\": \"medium\",\n    \"breaking_changes\": true,\n    \"test_suggestions\": [\n        \"**For `admin_password`:**\",\n        \"- Verify that the application still functions correctly when the `ADMIN_PASSWORD` environment variable is *not* set (it should use \\\"12345\\\" as a fallback).\",\n        \"- Set `ADMIN_PASSWORD=\\\"new_secure_password\\\"` in your environment and verify that the application correctly uses this new password.\",\n        \"**For `users`:**\",\n        \"- The removal of the global `users` variable will likely cause `NameError` exceptions where `users` was previously accessed. This is an expected breaking change and indicates the locations where further refactoring (creating and using a `UserManager` instance) is required.\",\n        \"- Update or create new tests for the `UserManager` class once it is implemented to manage user data.\"\n    ]\n}\n```",
+        "fixes_generated": 1
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "716bd382-63f9-4ac7-a14c-4565f76d3aaa",
+      "timestamp": "2026-01-15T23:09:19.116429",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "FIX",
+      "details": {
+        "file": "sandbox\\test_cases\\buggy_code_quality.py",
+        "issue": "Hardcoded sensitive information (`admin_password`). This is a security vulnerability.",
+        "input_prompt": "Generating fix for: Hardcoded sensitive information (`admin_password`). This is a security vulnerability.",
+        "output_response": "Fix generation started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "f33ad562-8744-448b-85e4-8820ac952b6b",
+      "timestamp": "2026-01-15T23:09:43.079767",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "FIX",
+      "details": {
+        "file": "sandbox\\test_cases\\buggy_code_quality.py",
+        "input_prompt": "Generating fix for: Hardcoded sensitive information (`admin_password`). This is a security vulnerability.",
+        "output_response": "```json\n{\n    \"fixes\": [\n        {\n            \"file\": \"sandbox\\\\test_cases\\\\buggy_code_quality.py\",\n            \"original_code\": \"admin_password = \\\"12345\\\"  # Hardcoded password\\n\",\n            \"fixed_code\": \"admin_password = os.getenv(\\\"ADMIN_PASSWORD\\\")  # Load from environment variable\\n\",\n            \"explanation\": \"Removed hardcoded sensitive information (`admin_password`) by replacing it with a call to `os.getenv('ADMIN_PASSWORD')`. This ensures the password is loaded from an environment variable at runtime, significantly improving security by preventing sensitive data from being stored directly in the codebase. This change requires the `os` module to be imported.\",\n            \"line_start\": 10,\n            \"line_end\": 10,\n            \"confidence\": \"high\",\n            \"breaking_changes\": true,\n            \"test_suggestions\": [\n                \"Ensure the `ADMIN_PASSWORD` environment variable is set with the correct password before running the application.\",\n                \"Verify that authentication succeeds when `ADMIN_PASSWORD` is correctly set.\",\n                \"Test authentication failure scenarios when `ADMIN_PASSWORD` is not set or set incorrectly.\"\n            ]\n        },\n        {\n            \"file\": \"sandbox\\\\test_cases\\\\buggy_code_quality.py\",\n            \"original_code\": \"\",\n            \"fixed_code\": \"import os\\n\",\n            \"explanation\": \"Added `import os` to enable loading sensitive information from environment variables using `os.getenv()`, which is required by the fix for the hardcoded password. This import is placed at the beginning of the file for standard practice.\",\n            \"line_start\": 1,\n            \"line_end\": 1,\n            \"confidence\": \"high\",\n            \"breaking_changes\": false,\n            \"test_suggestions\": []\n        }\n    ]\n}\n```",
+        "fixes_generated": 2
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "5352ad05-79cd-4e92-935f-ded9e2b2bcf7",
+      "timestamp": "2026-01-15T23:09:43.089679",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "FIX",
+      "details": {
+        "file": "sandbox\\test_cases\\buggy_code_quality.py",
+        "issue": "Debug flag `DEBUG` is a global variable. Debug prints are left in production code.",
+        "input_prompt": "Generating fix for: Debug flag `DEBUG` is a global variable. Debug prints are left in production code.",
+        "output_response": "Fix generation started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "cfc8ad4e-d1a7-46df-bd0a-a19d669b65b8",
+      "timestamp": "2026-01-15T23:10:00.330926",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "FIX",
+      "details": {
+        "file": "sandbox\\test_cases\\buggy_code_quality.py",
+        "input_prompt": "Generating fix for: Debug flag `DEBUG` is a global variable. Debug prints are left in production code.",
+        "output_response": "```json\n{\n    \"file\": \"sandbox\\\\test_cases\\\\buggy_code_quality.py\",\n    \"original_code\": \"DEBUG = True\",\n    \"fixed_code\": \"DEBUG = False\",\n    \"explanation\": \"Changed the global `DEBUG` flag from `True` to `False`. This action disables any conditional debug print statements that rely on this flag, preventing debug information from being outputted in a production environment. While this addresses the immediate concern of debug prints appearing in production, the global `DEBUG` flag itself remains a code smell. The recommended long-term solution is to remove this flag entirely and refactor all debug print statements to use a proper logging framework (e.g., Python's `logging` module), configured to output debug messages only in development environments.\",\n    \"line_start\": 11,\n    \"line_end\": 11,\n    \"confidence\": \"high\",\n    \"breaking_changes\": false,\n    \"test_suggestions\": [\n        \"Verify that no debug prints (e.g., from `if DEBUG: print(...)` blocks) appear in the console or logs during application execution.\",\n        \"Ensure that the application's core functionality and behavior remain unchanged, apart from the absence of debug output.\"\n    ]\n}\n```",
+        "fixes_generated": 1
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "6e992941-242d-4286-801c-4d063b94739b",
+      "timestamp": "2026-01-15T23:10:00.338900",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "FIX",
+      "details": {
+        "file": "sandbox\\test_cases\\buggy_code_quality.py",
+        "issue": "Unused imports (`sys`, `json`) and unused variable (`unused_var`).",
+        "input_prompt": "Generating fix for: Unused imports (`sys`, `json`) and unused variable (`unused_var`).",
+        "output_response": "Fix generation started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "64db787d-f78e-4bda-ad17-838f3347a029",
+      "timestamp": "2026-01-15T23:10:03.306127",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "FIX",
+      "details": {
+        "file": "sandbox\\test_cases\\buggy_code_quality.py",
+        "input_prompt": "Generating fix for: Unused imports (`sys`, `json`) and unused variable (`unused_var`).",
+        "output_response": "```json\n{\n    \"fixes\": [\n        {\n            \"file\": \"sandbox\\\\test_cases\\\\buggy_code_quality.py\",\n            \"original_code\": \"import sys\\nimport json\\nunused_var = \\\"not used anywhere\\\"\",\n            \"fixed_code\": \"\",\n            \"explanation\": \"Removed unused imports (`sys`, `json`) and an unused variable (`unused_var`). This improves code cleanliness, reduces potential confusion, and adheres to the 'Clean Code' principle of removing dead code. Unused imports and variables can be misleading and suggest functionality that isn't actually being used, making the code harder to understand and maintain.\",\n            \"line_start\": 14,\n            \"line_end\": 16,\n            \"confidence\": \"high\",\n            \"breaking_changes\": false,\n            \"test_suggestions\": [\n                \"Run existing unit tests to ensure no functionality was inadvertently affected (though highly unlikely for unused code removal).\",\n                \"Perform a static analysis check (e.g., with a linter) to confirm no other unused code exists.\"\n            ]\n        }\n    ]\n}\n```",
+        "fixes_generated": 1
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2be4a82f-b7cd-450e-a577-c7eee176f18d",
+      "timestamp": "2026-01-15T23:10:03.316056",
+      "agent_name": "FixerAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "FIX",
+      "details": {
+        "file": "sandbox\\test_cases\\buggy_code_quality.py",
+        "issue": "Function `add_user` lacks docstrings and type hints, violating PEP 8 for spacing, and uses a global variable. It also contains a debug print.",
+        "input_prompt": "Generating fix for: Function `add_user` lacks docstrings and type hints, violating PEP 8 for spacing, and uses a global variable. It also contains a debug print.",
+        "output_response": "Fix generation started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "cc698707-e9d5-40a3-a1ae-241172c30894",
+      "timestamp": "2026-01-15T23:10:16.512266",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "83c5e3b0-05dd-4d1a-891d-dfa46f81904d",
+      "timestamp": "2026-01-15T23:10:16.520316",
+      "agent_name": "AuditorAgent",
+      "model_used": "gemini-2.5-flash",
+      "action": "ANALYSIS",
+      "details": {
+        "target_dir": "sandbox\\test_cases",
+        "files_analyzed": 5,
+        "input_prompt": "Analyzing 5 Python files in sandbox\\test_cases",
+        "output_response": "Analysis started"
+      },
+      "status": "STARTED"
+    },
+    {
+      "id": "ad5e1c47-3c03-4392-8aa4-88718f0f7466",
+      "timestamp": "2026-01-15T23:10:59.125414",
+      "agent_name": "AgentRegistry",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Agent registry initialization",
+        "output_response": "Successfully loaded 3 agents: ['auditor', 'fixer', 'judge']"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "id": "5dab6d88-b89a-4a5e-a886-3213a40402a0",
+      "timestamp": "2026-01-15T23:19:04.239961",
+      "agent_name": "System",
+      "model_used": "N/A",
+      "action": "ANALYSIS",
+      "details": {
+        "input_prompt": "Starting system on target directory ./sandbox/test_cases",
+        "output_response": "Initialization completed"
+      },
+      "status": "SUCCESS"
     }
   ]
 }
