@@ -3,6 +3,7 @@ import sys
 import os
 from dotenv import load_dotenv
 from src.utils.logger import log_experiment, ActionType  # Import ActionType
+from src.orchestrator import RefactoringOrchestrator
 
 load_dotenv()
 
@@ -15,7 +16,7 @@ def main():
         print(f"❌ Dossier {args.target_dir} introuvable.")
         sys.exit(1)
 
-    print(f"🚀 DEMARRAGE SUR : {args.target_dir}")
+    print(f"🚀 DEMARRAGE SUR : {args.target_dir}", flush=True)
 
     # Correct log_experiment call with ActionType and required details dict
     log_experiment(
@@ -28,7 +29,11 @@ def main():
         }
     )
 
-    print("✅ MISSION_COMPLETE")
+    # Initialize and run the orchestrator
+    orchestrator = RefactoringOrchestrator(args.target_dir)
+    results = orchestrator.run()
+
+    print("✅ MISSION_COMPLETE", flush=True)
 
 if __name__ == "__main__":
     main()

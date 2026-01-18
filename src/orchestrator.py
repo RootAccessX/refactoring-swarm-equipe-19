@@ -66,7 +66,7 @@ class RefactoringOrchestrator:
         if not self.registry.is_initialized():
             self.registry.initialize()
         
-        print(f"🔧 Orchestrator initialized for: {target_dir}")
+        print(f"🔧 Orchestrator initialized for: {target_dir}", flush=True)
     
     def run(self) -> Dict[str, Any]:
         """
@@ -75,24 +75,24 @@ class RefactoringOrchestrator:
         Returns:
             Summary of processing results
         """
-        print(f"\n{'='*60}")
-        print(f"🚀 STARTING REFACTORING SWARM")
-        print(f"{'='*60}\n")
+        print(f"\n{'='*60}", flush=True)
+        print(f"🚀 STARTING REFACTORING SWARM", flush=True)
+        print(f"{'='*60}\n", flush=True)
         
         # Find Python files
         python_files = list(self.target_dir.glob("*.py"))
         
         if not python_files:
-            print(f"⚠️  No Python files found in {self.target_dir}")
+            print(f"⚠️  No Python files found in {self.target_dir}", flush=True)
             return {"files_processed": 0, "success": False}
         
-        print(f"📁 Found {len(python_files)} Python file(s) to process\n")
+        print(f"📁 Found {len(python_files)} Python file(s) to process\n", flush=True)
         
         # Process each file through workflow graph
         for file_path in python_files:
-            print(f"\n{'─'*60}")
-            print(f"📄 Processing: {file_path.name}")
-            print(f"{'─'*60}\n")
+            print(f"\n{'─'*60}", flush=True)
+            print(f"📄 Processing: {file_path.name}", flush=True)
+            print(f"{'─'*60}\n", flush=True)
             
             self._execute_workflow(str(file_path))
         
@@ -103,15 +103,15 @@ class RefactoringOrchestrator:
         quota_manager = get_quota_manager()
         quota_stats = quota_manager.get_stats()
         
-        print(f"\n{'='*60}")
-        print(f"✅ WORKFLOW COMPLETE")
-        print(f"{'='*60}\n")
-        print(f"Files processed: {summary['files_processed']}")
-        print(f"Successful: {summary['successful']}")
-        print(f"Failed: {summary['failed']}")
-        print(f"\n📊 API Usage:")
-        print(f"  Total API calls: {quota_stats['total_calls']}")
-        print(f"  Calls/minute: {quota_stats['calls_per_minute']:.1f}")
+        print(f"\n{'='*60}", flush=True)
+        print(f"✅ WORKFLOW COMPLETE", flush=True)
+        print(f"{'='*60}\n", flush=True)
+        print(f"Files processed: {summary['files_processed']}", flush=True)
+        print(f"Successful: {summary['successful']}", flush=True)
+        print(f"Failed: {summary['failed']}", flush=True)
+        print(f"\n📊 API Usage:", flush=True)
+        print(f"  Total API calls: {quota_stats['total_calls']}", flush=True)
+        print(f"  Calls/minute: {quota_stats['calls_per_minute']:.1f}", flush=True)
         
         return summary
     
@@ -137,57 +137,65 @@ class RefactoringOrchestrator:
         fixer = self.registry.get_fixer()
         judge = self.registry.get_judge()
         
-        print(f"🔄 Starting self-healing loop (max {MAX_ITERATIONS} iterations)...")
+        print(f"🔄 Starting self-healing loop (max {MAX_ITERATIONS} iterations)...", flush=True)
         
         # Self-healing loop
         while state.iteration < MAX_ITERATIONS and not state.completed:
             state.iteration += 1
-            print(f"\n  🔁 Iteration {state.iteration}/{MAX_ITERATIONS}")
+            print(f"\n  🔁 Iteration {state.iteration}/{MAX_ITERATIONS}", flush=True)
             
             # Node 1: Auditor analyzes code
-            print("    1️⃣ Auditor analyzing...")
+            print("    1️⃣ Auditor analyzing...", flush=True)
             state.audit_result = self._run_auditor(auditor, file_path)
             
             if not state.audit_result or not state.audit_result.get("issues"):
-                print("    ✅ No issues found!")
+                print("    ✅ No issues found!", flush=True)
                 state.completed = True
                 break
             
             issues_count = len(state.audit_result.get("issues", []))
-            print(f"    🔍 Found {issues_count} issue(s)")
+            print(f"    🔍 Found {issues_count} issue(s)", flush=True)
             
             # Node 2: Fixer generates fixes
-            print("    2️⃣ Fixer generating fixes...")
+            print("    2️⃣ Fixer generating fixes...", flush=True)
             state.fix_result = self._run_fixer(fixer, file_path, state.audit_result)
             
-            if not state.fix_result or not state.fix_result.get("fixes"):
-                print("    ⚠️  Fixer couldn't generate fixes - stopping")
+            # Check if Fixer returned valid results
+            if not state.fix_result:
+                print("    ⚠️  Fixer returned no result - stopping", flush=True)
                 break
             
-            fixes_count = len(state.fix_result.get("fixes", []))
-            print(f"    🔧 Generated {fixes_count} fix(es)")
+            # Handle both direct fixes and results structure
+            fixes = state.fix_result.get("fixes") or state.fix_result.get("results", [])
+            if not fixes:
+                error_msg = state.fix_result.get("error", "Unknown error")
+                print(f"    ⚠️  Fixer couldn't generate fixes: {error_msg}", flush=True)
+                break
+            
+            fixes_count = len(fixes)
+            print(f"    🔧 Generated {fixes_count} fix(es)", flush=True)
             
             # Node 3: Judge validates fixes
-            print("    3️⃣ Judge evaluating...")
+            print("    3️⃣ Judge evaluating...", flush=True)
             state.judgment = self._run_judge(judge, file_path, state.audit_result, state.fix_result)
             
             verdict = state.judgment.get("verdict", "UNKNOWN")
             score = state.judgment.get("overall_score", 0)
-            print(f"    📊 Verdict: {verdict} (Score: {score}/100)")
+            print(f"    📊 Verdict: {verdict} (Score: {score}/100)", flush=True)
             
             # Check if approved - exit loop
             if verdict == "APPROVED":
-                print(f"    ✅ APPROVED - Stopping at iteration {state.iteration}")
+                print(f"    ✅ APPROVED - Stopping at iteration {state.iteration}", flush=True)
                 state.completed = True
                 break
             elif verdict == "REJECTED":
-                print(f"    ❌ REJECTED - Stopping at iteration {state.iteration}")
+                print(f"    ❌ REJECTED - Stopping at iteration {state.iteration}", flush=True)
                 break
             else:  # NEEDS_REVISION
                 if state.iteration < MAX_ITERATIONS:
-                    print(f"    🔄 NEEDS_REVISION - Continuing to iteration {state.iteration + 1}")
+                    print(f"    🔄 NEEDS_REVISION - Continuing to iteration {state.iteration + 1}", flush=True)
                 else:
-                    print(f"    ⏱️  Max iterations reached - Stopping")
+                    print(f"    ⏱️  Max iterations reached - Stopping", flush=True)
         
         # Save result
         self.results[file_path] = state
@@ -214,7 +222,7 @@ class RefactoringOrchestrator:
             result = auditor.analyze(target_dir)
             return result
         except Exception as e:
-            print(f"    ❌ Auditor error: {str(e)}")
+            print(f"    ❌ Auditor error: {str(e)}", flush=True)
             return {"issues": [], "error": str(e)}
     
     def _run_fixer(self, fixer, file_path: str, audit_result: Dict) -> Dict[str, Any]:
@@ -226,20 +234,21 @@ class RefactoringOrchestrator:
             result = fixer.fix_issues(issues, target_dir)
             return result
         except Exception as e:
-            print(f"    ❌ Fixer error: {str(e)}")
-            return {"fixes": [], "error": str(e)}
+            print(f"    ❌ Fixer error: {str(e)}", flush=True)
+            return {"fixes": [], "results": [], "error": str(e)}
     
     def _run_judge(self, judge, file_path: str, audit_result: Dict, fix_result: Dict) -> Dict[str, Any]:
         """Execute Judge agent."""
         try:
             import os
             target_dir = os.path.dirname(file_path)
-            fixes = fix_result.get("fixes", [])
+            # Handle both direct fixes and results structure
+            fixes = fix_result.get("fixes") or fix_result.get("results", [])
             issues = audit_result.get("issues", [])
             result = judge.evaluate_fixes(fixes, issues, target_dir)
             return result
         except Exception as e:
-            print(f"    ❌ Judge error: {str(e)}")
+            print(f"    ❌ Judge error: {str(e)}", flush=True)
             return {"verdict": "ERROR", "overall_score": 0, "error": str(e)}
     
     def _generate_summary(self) -> Dict[str, Any]:
