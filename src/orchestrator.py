@@ -12,8 +12,8 @@ from src.agent_registry import get_registry
 from src.utils.logger import log_experiment, ActionType
 from src.utils.quota_manager import get_quota_manager
 
-# Maximum iterations for self-healing loop
-MAX_ITERATIONS = 10
+# Maximum iterations for self-healing loop (reduced to save API quota)
+MAX_ITERATIONS = 3
 
 
 class WorkflowState:
@@ -139,25 +139,26 @@ class RefactoringOrchestrator:
         
         print(f"🔄 Starting self-healing loop (max {MAX_ITERATIONS} iterations)...", flush=True)
         
-        # Self-healing loop
+        # Run Auditor once at the beginning
+        print(f"\n  📋 Initial Analysis", flush=True)
+        print("    1️⃣ Auditor analyzing...", flush=True)
+        state.audit_result = self._run_auditor(auditor, file_path)
+        
+        if not state.audit_result or not state.audit_result.get("issues"):
+            print("    ✅ No issues found!", flush=True)
+            state.completed = True
+            return state
+        
+        issues_count = len(state.audit_result.get("issues", []))
+        print(f"    🔍 Found {issues_count} issue(s)", flush=True)
+        
+        # Self-healing loop - iterate on fixes only
         while state.iteration < MAX_ITERATIONS and not state.completed:
             state.iteration += 1
             print(f"\n  🔁 Iteration {state.iteration}/{MAX_ITERATIONS}", flush=True)
             
-            # Node 1: Auditor analyzes code
-            print("    1️⃣ Auditor analyzing...", flush=True)
-            state.audit_result = self._run_auditor(auditor, file_path)
-            
-            if not state.audit_result or not state.audit_result.get("issues"):
-                print("    ✅ No issues found!", flush=True)
-                state.completed = True
-                break
-            
-            issues_count = len(state.audit_result.get("issues", []))
-            print(f"    🔍 Found {issues_count} issue(s)", flush=True)
-            
-            # Node 2: Fixer generates fixes
-            print("    2️⃣ Fixer generating fixes...", flush=True)
+            # Node 1: Fixer generates fixes
+            print("    1️⃣ Fixer generating fixes...", flush=True)
             state.fix_result = self._run_fixer(fixer, file_path, state.audit_result)
             
             # Check if Fixer returned valid results
@@ -175,11 +176,16 @@ class RefactoringOrchestrator:
             fixes_count = len(fixes)
             print(f"    🔧 Generated {fixes_count} fix(es)", flush=True)
             
-            # Node 3: Judge validates fixes
-            print("    3️⃣ Judge evaluating...", flush=True)
+            # Apply fixes immediately
+            print("    📝 Applying fixes to file...", flush=True)
+            applied_count = self._apply_fixes(fixer, state.fix_result, file_path)
+            print(f"    ✅ Applied {applied_count}/{fixes_count} fix(es)", flush=True)
+            
+            # Node 2: Judge validates fixes (only call if needed)
+            print("    2️⃣ Judge evaluating...", flush=True)
             state.judgment = self._run_judge(judge, file_path, state.audit_result, state.fix_result)
             
-            verdict = state.judgment.get("verdict", "UNKNOWN")
+            verdict = state.judgment.get("verdict", "NEEDS_REVISION")
             score = state.judgment.get("overall_score", 0)
             print(f"    📊 Verdict: {verdict} (Score: {score}/100)", flush=True)
             
@@ -237,19 +243,92 @@ class RefactoringOrchestrator:
             print(f"    ❌ Fixer error: {str(e)}", flush=True)
             return {"fixes": [], "results": [], "error": str(e)}
     
+    def _apply_fixes(self, fixer, fix_result_data: Dict, file_path: str) -> int:
+        """Apply generated fixes to the file."""
+        applied_count = 0
+        
+        # Get results array from fix_issues output
+        results = fix_result_data.get("results", [])
+        
+        for result_item in results:
+            fix_result = result_item.get("fix_result", {})
+            
+            # Check if fix generation was successful
+            if fix_result.get("status") == "SUCCESS":
+                # Get the list of fixes from the fix_result
+                fixes_list = fix_result.get("fixes", [])
+                
+                for fix in fixes_list:
+                    try:
+                        # Apply each fix
+                        apply_result = fixer.apply_fix(fix, dry_run=False)
+                        if apply_result.get("status") == "SUCCESS":
+                            applied_count += 1
+                        else:
+                            print(f"      ⚠️ Fix not applied: {apply_result.get('message', 'Unknown reason')}", flush=True)
+                    except Exception as e:
+                        print(f"      ⚠️ Failed to apply fix: {str(e)}", flush=True)
+        
+        return applied_count
+    
     def _run_judge(self, judge, file_path: str, audit_result: Dict, fix_result: Dict) -> Dict[str, Any]:
         """Execute Judge agent."""
         try:
             import os
             target_dir = os.path.dirname(file_path)
-            # Handle both direct fixes and results structure
-            fixes = fix_result.get("fixes") or fix_result.get("results", [])
+            
+            # Extract fixes from the fix_result structure
+            fixes_list = []
             issues = audit_result.get("issues", [])
-            result = judge.evaluate_fixes(fixes, issues, target_dir)
+            
+            # Handle the results structure from fix_issues()
+            if "results" in fix_result:
+                for result_item in fix_result.get("results", []):
+                    fix_result_data = result_item.get("fix_result", {})
+                    if fix_result_data.get("status") == "SUCCESS":
+                        # Get the fixes array from the fix_result
+                        item_fixes = fix_result_data.get("fixes", [])
+                        # Validate each fix is a dict before adding
+                        for fix in item_fixes:
+                            if isinstance(fix, dict):
+                                fixes_list.append(fix)
+                            else:
+                                print(f"      ⚠️ Skipping invalid fix (not a dict): {type(fix)}", flush=True)
+            # Handle direct fixes array
+            elif "fixes" in fix_result:
+                raw_fixes = fix_result.get("fixes", [])
+                for fix in raw_fixes:
+                    if isinstance(fix, dict):
+                        fixes_list.append(fix)
+                    else:
+                        print(f"      ⚠️ Skipping invalid fix (not a dict): {type(fix)}", flush=True)
+            
+            # If no valid fixes extracted, return rejection
+            if not fixes_list:
+                return {
+                    "verdict": "REJECTED",
+                    "overall_score": 0,
+                    "error": "No valid fixes to evaluate"
+                }
+            
+            result = judge.evaluate_fixes(fixes_list, issues, target_dir)
+            
+            # Ensure verdict is not UNKNOWN
+            if result.get("verdict") == "UNKNOWN" or not result.get("verdict"):
+                # Default to NEEDS_REVISION if no clear verdict
+                if result.get("overall_score", 0) >= 80:
+                    result["verdict"] = "APPROVED"
+                elif result.get("overall_score", 0) < 50:
+                    result["verdict"] = "REJECTED"
+                else:
+                    result["verdict"] = "NEEDS_REVISION"
+            
             return result
         except Exception as e:
+            import traceback
             print(f"    ❌ Judge error: {str(e)}", flush=True)
-            return {"verdict": "ERROR", "overall_score": 0, "error": str(e)}
+            print(f"    Debug: {traceback.format_exc()}", flush=True)
+            return {"verdict": "REJECTED", "overall_score": 0, "error": str(e)}
     
     def _generate_summary(self) -> Dict[str, Any]:
         """Generate summary of all processing results."""

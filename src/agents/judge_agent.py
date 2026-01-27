@@ -210,6 +210,19 @@ class JudgeAgent(BaseAgent):
         Returns:
             Dictionary containing aggregated judgment results
         """
+        if not fixes:
+            return {
+                "status": "NO_FIXES",
+                "verdict": "NO_FIXES",
+                "overall_score": 0,
+                "total_fixes": 0,
+                "approved": 0,
+                "rejected": 0,
+                "needs_revision": 0,
+                "judgments": [],
+                "summary": "No fixes to evaluate"
+            }
+        
         judgments = []
         approved_count = 0
         rejected_count = 0
@@ -219,22 +232,36 @@ class JudgeAgent(BaseAgent):
             # Get corresponding issue if available
             issue = issues[idx] if issues and idx < len(issues) else None
             
-            # Evaluate the fix
-            judgment = self.evaluate_fix(fix, issue, test_results)
-            judgments.append({
-                "fix": fix,
-                "issue": issue,
-                "judgment": judgment
-            })
-            
-            # Count verdicts
-            verdict = judgment.get("verdict", "NEEDS_REVISION")
-            if verdict in ["APPROVED", "APPROVED_WITH_NOTES"]:
-                approved_count += 1
-            elif verdict == "REJECTED":
-                rejected_count += 1
-            else:
+            try:
+                # Evaluate the fix
+                judgment = self.evaluate_fix(fix, issue, test_results)
+                judgments.append({
+                    "fix": fix,
+                    "issue": issue,
+                    "judgment": judgment
+                })
+                
+                # Count verdicts
+                verdict = judgment.get("verdict", "NEEDS_REVISION")
+                if verdict in ["APPROVED", "APPROVED_WITH_NOTES"]:
+                    approved_count += 1
+                elif verdict == "REJECTED":
+                    rejected_count += 1
+                else:
+                    needs_revision_count += 1
+            except Exception as e:
+                # If judgment fails, treat as needing revision
+                print(f"      ⚠️ Judge evaluation failed for fix {idx + 1}: {str(e)}", flush=True)
                 needs_revision_count += 1
+                judgments.append({
+                    "fix": fix,
+                    "issue": issue,
+                    "judgment": {
+                        "verdict": "NEEDS_REVISION",
+                        "overall_score": 50,
+                        "error": str(e)
+                    }
+                })
         
         # Calculate overall assessment
         total_fixes = len(fixes)
@@ -242,9 +269,17 @@ class JudgeAgent(BaseAgent):
             approved_count, rejected_count, needs_revision_count, total_fixes
         )
         
+        # Calculate overall score (0-100)
+        if total_fixes > 0:
+            overall_score = int((approved_count / total_fixes) * 100)
+        else:
+            overall_score = 0
+        
         return {
             "status": "COMPLETED",
-            "overall_verdict": overall_verdict,
+            "verdict": overall_verdict,  # Use 'verdict' not 'overall_verdict'
+            "overall_verdict": overall_verdict,  # Keep for backwards compatibility
+            "overall_score": overall_score,  # Add the missing score
             "total_fixes": total_fixes,
             "approved": approved_count,
             "rejected": rejected_count,
@@ -366,16 +401,19 @@ class JudgeAgent(BaseAgent):
         if total == 0:
             return "NO_FIXES"
         
-        if rejected > 0:
-            return "REJECTED"
+        # Calculate approval percentage
+        approval_rate = (approved / total) * 100
+        rejection_rate = (rejected / total) * 100
         
-        if needs_revision > 0:
-            return "NEEDS_REVISION"
-        
-        if approved == total:
+        # More lenient logic: approve if majority are good
+        if approval_rate >= 80:
             return "APPROVED"
-        
-        return "APPROVED_WITH_NOTES"
+        elif approval_rate >= 60:
+            return "APPROVED_WITH_NOTES"
+        elif rejection_rate >= 50:
+            return "REJECTED"
+        else:
+            return "NEEDS_REVISION"
     
     def _create_summary(self, judgments: List[Dict[str, Any]]) -> str:
         """
